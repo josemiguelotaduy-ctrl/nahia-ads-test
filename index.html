@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nahia Home · Test Lab (Google &amp; Meta Ads)</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+<style>
+  :root{--bg:#faf8f5;--card:#fff;--ink:#2b2622;--mute:#8a8178;--line:#ece6df;--pos:#2f7d55;--neg:#b8473a;--acc:#b08968}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Inter",sans-serif;background:var(--bg);color:var(--ink)}
+  .wrap{max-width:1180px;margin:0 auto;padding:28px 20px 60px}
+  header{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;margin-bottom:22px}
+  h1{font-size:22px;margin:0;font-weight:600;letter-spacing:.2px}
+  .sub{color:var(--mute);font-size:12px;margin-top:3px}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-bottom:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+  .kpi .l{font-size:12px;color:var(--mute)} .kpi .v{font-size:24px;font-weight:600;margin-top:4px} .kpi .s{font-size:12px;color:var(--mute);margin-top:2px}
+  .pos{color:var(--pos)} .neg{color:var(--neg)}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px} @media(max-width:900px){.grid{grid-template-columns:1fr}}
+  .full{margin-top:14px}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  td,th{padding:8px 6px;border-bottom:1px solid var(--line);text-align:right} td:first-child,th:first-child{text-align:left}
+  th{font-size:11px;color:var(--mute);font-weight:600;text-transform:uppercase;letter-spacing:.5px;cursor:pointer;user-select:none}
+  tr.sec td{font-weight:700;border-bottom:2px solid var(--ink)}
+  h3{margin:0 0 10px;font-size:14px;font-weight:600}
+  .note{font-size:12px;color:var(--mute);margin-top:8px;line-height:1.5}
+  .badge{display:inline-block;padding:2px 7px;border-radius:6px;font-size:11px;font-weight:600}
+  .badge.on{background:#e6f4ec;color:#2f7d55} .badge.off{background:#f3efea;color:#8a8178}
+
+  #loginOverlay{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:9999}
+  .loginBox{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:36px;width:100%;max-width:380px;box-shadow:0 12px 32px rgba(0,0,0,0.06);text-align:center}
+  .loginBox h2{margin:0 0 6px;font-size:20px;font-weight:600}
+  .loginBox p{margin:0 0 20px;font-size:13px;color:var(--mute)}
+  .loginBox input{width:100%;margin-bottom:12px;padding:10px 14px;border:1px solid var(--line);border-radius:8px;font-size:14px;outline:none}
+  .loginBox button{width:100%;padding:10px;background:var(--ink);color:#fff;border:none;border-radius:8px;font-weight:600;cursor:pointer}
+  .loginBox .err{color:var(--neg);font-size:12px;margin-top:10px;display:none}
+</style>
+</head>
+<body>
+<div id="loginOverlay">
+  <div class="loginBox">
+    <h2>Nahia Home</h2>
+    <p>Ads A/B Test Lab · Noviembre 2026</p>
+    <form onsubmit="handleLogin(event)">
+      <input type="password" id="pwdInput" placeholder="Introduce la contraseña" autocomplete="current-password" autofocus required>
+      <button type="submit">Entrar</button>
+      <div id="loginErr" class="err">Contraseña incorrecta</div>
+    </form>
+  </div>
+</div>
+
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Nahia Home · Ads A/B Test Lab (Noviembre 2026)</h1>
+      <div class="sub" id="gen"></div>
+    </div>
+  </header>
+
+  <div class="kpis" id="kpis"></div>
+
+  <div class="card full">
+    <h3>Control de Presupuesto Mensual Combinado (Techo Estricto: 1.000,00 € · Plan 2 Fases)</h3>
+    <div id="budgetBar" style="margin-top:10px"></div>
+    <div class="note">
+      <b>Fase 1 (1–10 Nov · Test):</b> 32,50 €/día combinados (20,00 €/día Google + 12,50 €/día Meta = 325 € total).<br>
+      <b>Fase 2 (11–30 Nov · Escalado Ganadores):</b> El 10 de noviembre se pausan los brazos y creatividades perdedoras y los ~575 € restantes (+100 € de margen de seguridad) se asignan al 100% a los ganadores.
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Google Ads · Campañas Test (Shopping Arm A vs Arm B y Search)</h3>
+      <table id="tGoogC"></table>
+    </div>
+    <div class="card">
+      <h3>Google Search · 6 Marcas de Lujo Exact Match (G2)</h3>
+      <table id="tGoogAG"></table>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Meta Ads · Ad Sets (Arm A Carrusel vs Arm B Catálogo 238 vs Retargeting)</h3>
+      <table id="tMetaAS"></table>
+    </div>
+    <div class="card">
+      <h3>Evolución Diaria del Test (Gasto vs Ventas Noviembre)</h3>
+      <canvas id="chDaily" height="190"></canvas>
+    </div>
+  </div>
+
+  <div class="card full">
+    <h3>Meta Ads · Ranking de los 8 Anuncios Westwing (Creatividad × Copy · Cero mención de envío)</h3>
+    <table id="tMetaAds"></table>
+  </div>
+
+  <div class="card full">
+    <h3>Google Search · Ranking de los 12 Anuncios RSA por Marca y Ángulo de Copy</h3>
+    <table id="tGoogAds"></table>
+  </div>
+</div>
+
+<script>
+const DATA = {"generated": "2026-11-01 17:30", "summary": {"total_spend": 14.19, "google_spend": 13.26, "meta_spend": 0.93, "today_spend": 14.19, "daily_rate": 32.5, "net_sales": 0.0, "orders": 0, "test_clicks": 8, "meta_test_clicks": 6, "meta_test_atc": 0, "google_test_clicks": 2}, "daily": [{"d": "2026-11-01", "google_spend": 13.26, "meta_spend": 0.93, "net_sales": 0.0, "orders": 0}], "google_campaigns": [{"id": "24417748931", "name": "G1_Nov2026_Shopping_ManualCPC_ArmA", "status": "ENABLED", "daily_budget": 6.5, "spend": 0.76, "impr": 206, "clicks": 2, "conv": 0.0, "value": 0.0}, {"id": "24417749450", "name": "G1_Nov2026_Shopping_MaxConvValue_ArmB", "status": "ENABLED", "daily_budget": 6.5, "spend": 0.0, "impr": 18, "clicks": 0, "conv": 0.0, "value": 0.0}, {"id": "24417751670", "name": "G2_Nov2026_Search_LuxuryBrands_Exact", "status": "ENABLED", "daily_budget": 7.0, "spend": 0.0, "impr": 0, "clicks": 0, "conv": 0.0, "value": 0.0}], "google_adgroups": [{"id": "200398203254", "name": "AG4_Livlig_Garden", "campaign": "G2_Nov2026_Search_LuxuryBrands_Exact", "status": "ENABLED", "spend": 0.0, "impr": 0, "clicks": 0, "conv": 0.0, "value": 0.0}, {"id": "200398211406", "name": "All_Products_ManualCPC_055", "campaign": "G1_Nov2026_Shopping_ManualCPC_ArmA", "status": "ENABLED", "spend": 0.76, "impr": 206, "clicks": 2, "conv": 0.0, "value": 0.0}, {"id": "201342417003", "name": "AG2_Sabre_Paris", "campaign": "G2_Nov2026_Search_LuxuryBrands_Exact", "status": "ENABLED", "spend": 0.0, "impr": 0, "clicks": 0, "conv": 0.0, "value": 0.0}, {"id": "202101871576", "name": "AG3_Costa_Nova_Pearl", "campaign": "G2_Nov2026_Search_LuxuryBrands_Exact", "status": "ENABLED", "spend": 0.0, "impr": 0, "clicks": 0, "conv": 0.0, "value": 0.0}, {"id": "202101871896", "name": "AG6_Steamery_Stockholm", "campaign": "G2_Nov2026_Search_LuxuryBrands_Exact", "status": "ENABLED", "spend": 0.0, "impr": 0, "clicks": 0, "conv": 0.0, "value": 0.0}, {"id": "205412875087", "name": "AG1_Casa_Lopez_Paris", "campaign": "G2_Nov2026_Search_LuxuryBrands_Exact", "status": "ENABLED", "spend": 0.0, "impr": 0, "clicks": 0, "conv": 0.0, "value": 0.0}, {"id": "205412875807", "name": "AG5_Graccioza_Bath", "campaign": "G2_Nov2026_Search_LuxuryBrands_Exact", "status": "ENABLED", "spend": 0.0, "impr": 0, "clicks": 0, "conv": 0.0, "value": 0.0}, {"id": "208458193904", "name": "All_Products_MaxConvValue", "campaign": "G1_Nov2026_Shopping_MaxConvValue_ArmB", "status": "ENABLED", "spend": 0.0, "impr": 18, "clicks": 0, "conv": 0.0, "value": 0.0}], "google_ads": [{"id": "830206821778", "adgroup": "AG4_Livlig_Garden", "angle": "Copy 1 (Curated Collection)", "display_url": "nahiahome.com/collections/jardin", "final_url": "https://nahiahome.com/collections/jardin", "status": "ENABLED", "spend": 0.0, "impr": 0, "clicks": 0, "conv": 0.0, "value": 0.0}, {"id": "830206821781", "adgroup": "AG4_Livlig_Garden", "angle": "Copy 2 (Artisanal Edit)", "display_url": "nahiahome.com/collections/jardin", "final_url": "https://nahiahome.com/collections/jardin", "status": "ENABLED", "spend": 0.0, "impr": 0, "clicks": 0, "conv": 0.0, "value": 0.0}, {"id": "830206821784", "adgroup": "AG2_Sabre_Paris", "angle": "Copy 1 (Curated Collection)", "display_url": "nahiahome.com/collections/comedor", "final_url": "https://nahiahome.com/products/cubiertos-de-servicio-ensalada", "status": "ENABLED", "spend": 0.0, "impr": 0, "clicks": 0, "conv": 0.0, "value": 0.0}, {"id": "830206821787", "adgroup": "AG2_Sabre_Paris", "angle": "Copy 2 (Artisanal Edit)", "display_url": "nahiahome.com/collections/comedor", "final_url": "https://nahiahome.com/products/cubiertos-de-servicio-ensalada", "status": "ENABLED", "spend": 0.0, "impr": 0, "clicks": 0, "conv": 0.0, "value": 0.0}, {"id": "830206821790", "adgroup": "AG3_Costa_Nova_Pearl", "angle": "Copy 1 (Curated Collection)", "display_url": "nahiahome.com/collections/comedor", "final_url": "https://nahiahome.com/products/jarra-perla", "status": "ENABLED", "spend": 0.0, "impr": 0, "clicks": 0, "conv": 0.0, "value": 0.0}, {"id": "830206821793", "adgroup": "AG3_Costa_Nova_Pearl", "angle": "Copy 2 (Artisanal Edit)", "display_url": "nahiahome.com/collections/comedor", "final_url": "https://nahiahome.com/products/jarra-perla", "status": "ENABLED", "spend": 0.0, "impr": 0, "clicks": 0, "conv": 0.0, "value": 0.0}, {"id": "830206821796", "adgroup": "AG6_Steamery_Stockholm", "angle": "Copy 1 (Curated Collection)", "display_url": "nahiahome.com/collections/new-in", "final_url": "https://nahiahome.com/products/plancha-cirrus-3-iron-sand-steamery", "status": "ENABLED", "spend": 0.0, "impr": 0, "clicks": 0, "conv": 0.0, "value": 0.0}, {"id": "830206821799", "adgroup": "AG6_Steamery_Stockholm", "angle": "Copy 2 (Artisanal Edit)", "display_url": "nahiahome.com/collections/new-in", "final_url": "https://nahiahome.com/products/plancha-cirrus-3-iron-sand-steamery", "status": "ENABLED", "spend": 0.0, "impr": 0, "clicks": 0, "conv": 0.0, "value": 0.0}, {"id": "830206821802", "adgroup": "AG1_Casa_Lopez_Paris", "angle": "Copy 1 (Curated Collection)", "display_url": "nahiahome.com/collections/new-in", "final_url": "https://nahiahome.com/products/pie-de-lampara-vert-olive-casa-lopez-paris", "status": "ENABLED", "spend": 0.0, "impr": 0, "clicks": 0, "conv": 0.0, "value": 0.0}, {"id": "830206821805", "adgroup": "AG1_Casa_Lopez_Paris", "angle": "Copy 2 (Artisanal Edit)", "display_url": "nahiahome.com/collections/new-in", "final_url": "https://nahiahome.com/products/pie-de-lampara-vert-olive-casa-lopez-paris", "status": "ENABLED", "spend": 0.0, "impr": 0, "clicks": 0, "conv": 0.0, "value": 0.0}, {"id": "830206821808", "adgroup": "AG5_Graccioza_Bath", "angle": "Copy 1 (Curated Collection)", "display_url": "nahiahome.com/collections/bano", "final_url": "https://nahiahome.com/products/alfombra-de-bano-de-lino", "status": "ENABLED", "spend": 0.0, "impr": 0, "clicks": 0, "conv": 0.0, "value": 0.0}, {"id": "830206821811", "adgroup": "AG5_Graccioza_Bath", "angle": "Copy 2 (Artisanal Edit)", "display_url": "nahiahome.com/collections/bano", "final_url": "https://nahiahome.com/products/alfombra-de-bano-de-lino", "status": "ENABLED", "spend": 0.0, "impr": 0, "clicks": 0, "conv": 0.0, "value": 0.0}], "meta_adsets": [{"id": "120252159335300646", "name": "Warm_PanEU_30d_Retargeting", "campaign": "M2_Nov2026_Retargeting_Warm_PanEU", "status": "ACTIVE", "daily_budget": 2.5, "spend": 0.15, "impr": 31, "clicks": 0, "atc": 0, "conv": 0, "value": 0.0}, {"id": "120252159335070646", "name": "ArmB_Catalog_FullSet_Dynamic_35Plus", "campaign": "M1_Nov2026_Prospecting_Tier1EU_Test", "status": "ACTIVE", "daily_budget": 5.0, "spend": 0.78, "impr": 55, "clicks": 6, "atc": 0, "conv": 0, "value": 0.0}, {"id": "120252159334770646", "name": "ArmA_Editorial_Carousel_35Plus", "campaign": "M1_Nov2026_Prospecting_Tier1EU_Test", "status": "ACTIVE", "daily_budget": 5.0, "spend": 0.0, "impr": 0, "clicks": 0, "atc": 0, "conv": 0, "value": 0.0}], "meta_ads": [{"id": "120252170347120646", "name": "Ad_B1_FullCatalog_Copy1_EditorialHeritage", "adset": "ArmB_Catalog_FullSet_Dynamic_35Plus", "status": "ACTIVE", "spend": 0.78, "impr": 55, "clicks": 6, "atc": 0, "conv": 0, "value": 0.0}, {"id": "120252170349040646", "name": "Ad_R1_WarmDPA_Copy1_EffortlessElegance", "adset": "Warm_PanEU_30d_Retargeting", "status": "ACTIVE", "spend": 0.15, "impr": 25, "clicks": 0, "atc": 0, "conv": 0, "value": 0.0}, {"id": "120252170350380646", "name": "Ad_R2_WarmDPA_Copy2_IconicMaisons", "adset": "Warm_PanEU_30d_Retargeting", "status": "ACTIVE", "spend": 0.0, "impr": 6, "clicks": 0, "atc": 0, "conv": 0, "value": 0.0}, {"id": "120252170347880646", "name": "Ad_B2_FullCatalog_Copy2_StatementCraft", "adset": "ArmB_Catalog_FullSet_Dynamic_35Plus", "status": "ACTIVE", "spend": 0.0, "impr": 0, "clicks": 0, "atc": 0, "conv": 0, "value": 0.0}, {"id": "120252170345350646", "name": "Ad_A2_Copy2_HomeBathGarden_StatementCraft", "adset": "ArmA_Editorial_Carousel_35Plus", "status": "ACTIVE", "spend": 0.0, "impr": 0, "clicks": 0, "atc": 0, "conv": 0, "value": 0.0}, {"id": "120252170344700646", "name": "Ad_A2_Copy1_HomeBathGarden_EditorialHeritage", "adset": "ArmA_Editorial_Carousel_35Plus", "status": "ACTIVE", "spend": 0.0, "impr": 0, "clicks": 0, "atc": 0, "conv": 0, "value": 0.0}, {"id": "120252170343680646", "name": "Ad_A1_Copy2_TableLiving_StatementCraft", "adset": "ArmA_Editorial_Carousel_35Plus", "status": "ACTIVE", "spend": 0.0, "impr": 0, "clicks": 0, "atc": 0, "conv": 0, "value": 0.0}, {"id": "120252170342700646", "name": "Ad_A1_Copy1_TableLiving_EditorialHeritage", "adset": "ArmA_Editorial_Carousel_35Plus", "status": "ACTIVE", "spend": 0.0, "impr": 0, "clicks": 0, "atc": 0, "conv": 0, "value": 0.0}]};
+const eur = n => (n<0?"-":"")+Math.abs(+n||0).toLocaleString("es-ES",{minimumFractionDigits:2,maximumFractionDigits:2})+" €";
+const badge = s => `<span class="badge ${(s==="ACTIVE"||s==="ENABLED")?"on":"off"}">${s}</span>`;
+
+function render(){
+  document.getElementById("gen").textContent = "Actualizado " + DATA.generated + " (Hora Madrid) · Datos exclusivos del experimento de Noviembre 2026";
+  const S = DATA.summary;
+  const cap = 1000;
+  const pct = Math.min(100, (S.total_spend / cap * 100));
+  const rem = Math.max(0, cap - S.total_spend);
+
+  const cards = [
+    ["Gasto Total Acumulado (Nov)", eur(S.total_spend), `Google: ${eur(S.google_spend)} · Meta: ${eur(S.meta_spend)}`],
+    ["Presupuesto Restante (s/ 1.000 €)", eur(rem), `${pct.toFixed(1)}% consumido · Guardián activo`],
+    ["Ritmo Diario Configurado (Fase 1)", eur(S.daily_rate) + "/día", "Google: 20,00 €/día · Meta: 12,50 €/día"],
+    ["Ventas Shopify Nov (s/IVA)", eur(S.net_sales), `${S.orders} pedidos · ROAS Global: ${S.total_spend?(S.net_sales/S.total_spend).toFixed(2)+"x":"–"}`, S.net_sales>=S.total_spend*2.5?"pos":""],
+    ["Tráfico del Nuevo Test", `${S.test_clicks} clics`, `Meta: ${S.meta_test_clicks} clics (${S.meta_test_atc} ATC) · Google: ${S.google_test_clicks} clics`]
+  ];
+  document.getElementById("kpis").innerHTML = cards.map(x=>`<div class="card kpi"><div class="l">${x[0]}</div><div class="v ${x[3]||""}">${x[1]}</div><div class="s">${x[2]}</div></div>`).join("");
+
+  document.getElementById("budgetBar").innerHTML = `
+    <div style="background:#ece6df;border-radius:8px;height:16px;overflow:hidden">
+      <div style="width:${pct.toFixed(1)}%;background:${pct>90?"#b8473a":"#2f7d55"};height:100%"></div>
+    </div>
+    <div style="display:flex;justify-content:space-between;font-size:12px;margin-top:6px;color:#8a8178">
+      <span>Gastado Mes: <b>${eur(S.total_spend)}</b> (Hoy: <b>${eur(S.today_spend)}</b>)</span>
+      <span>Corte Fase 2: <b>10 Nov (~325 €)</b></span>
+      <span>Techo Mensual: <b>1.000,00 €</b></span>
+    </div>`;
+
+  // Google Campaigns
+  const gc = DATA.google_campaigns || [];
+  document.getElementById("tGoogC").innerHTML = `<tr><th>Campaña</th><th>Estado</th><th>Presup/día</th><th>Gasto</th><th>Impr</th><th>Clics</th><th>CPC</th><th>Conv</th><th>Valor</th><th>ROAS</th></tr>` +
+    gc.map(c=>`<tr><td><b>${c.name.replace("G1_Nov2026_","").replace("G2_Nov2026_","")}</b></td><td>${badge(c.status)}</td><td>${eur(c.daily_budget)}</td><td>${eur(c.spend)}</td><td>${c.impr}</td><td>${c.clicks}</td><td>${c.clicks?eur(c.spend/c.clicks):"–"}</td><td>${c.conv.toFixed(1)}</td><td>${eur(c.value)}</td><td><b>${c.spend?(c.value/c.spend).toFixed(2)+"x":"–"}</b></td></tr>`).join("");
+
+  // Google AdGroups
+  const gag = DATA.google_adgroups || [];
+  document.getElementById("tGoogAG").innerHTML = `<tr><th>Ad Group / Marca</th><th>Estado</th><th>Gasto</th><th>Impr</th><th>Clics</th><th>CTR</th><th>Conv</th><th>Valor</th><th>ROAS</th></tr>` +
+    gag.map(a=>`<tr><td>${a.name}</td><td>${badge(a.status)}</td><td>${eur(a.spend)}</td><td>${a.impr}</td><td>${a.clicks}</td><td>${a.impr?(a.clicks/a.impr*100).toFixed(1)+"%":"–"}</td><td>${a.conv.toFixed(1)}</td><td>${eur(a.value)}</td><td><b>${a.spend?(a.value/a.spend).toFixed(2)+"x":"–"}</b></td></tr>`).join("");
+
+  // Meta AdSets
+  const mas = DATA.meta_adsets || [];
+  document.getElementById("tMetaAS").innerHTML = `<tr><th>Ad Set</th><th>Estado</th><th>Presup/día</th><th>Gasto</th><th>Impr</th><th>Clics</th><th>CPC</th><th>ATC</th><th>Compras</th><th>ROAS</th></tr>` +
+    mas.map(a=>`<tr><td><b>${a.name}</b></td><td>${badge(a.status)}</td><td>${eur(a.daily_budget)}</td><td>${eur(a.spend)}</td><td>${a.impr}</td><td>${a.clicks}</td><td>${a.clicks?eur(a.spend/a.clicks):"–"}</td><td>${a.atc}</td><td>${a.conv}</td><td><b>${a.spend?(a.value/a.spend).toFixed(2)+"x":"–"}</b></td></tr>`).join("");
+
+  // Meta 8 Ads
+  const mads = DATA.meta_ads || [];
+  document.getElementById("tMetaAds").innerHTML = `<tr><th>Anuncio Westwing (Creatividad × Copy)</th><th>Ad Set</th><th>Estado</th><th>Gasto</th><th>Impr</th><th>Clics</th><th>CTR</th><th>CPC</th><th>ATC</th><th>Compras</th><th>Valor</th><th>ROAS</th></tr>` +
+    mads.map(a=>`<tr><td><b>${a.name}</b></td><td>${a.adset}</td><td>${badge(a.status)}</td><td>${eur(a.spend)}</td><td>${a.impr}</td><td>${a.clicks}</td><td>${a.impr?(a.clicks/a.impr*100).toFixed(2)+"%":"–"}</td><td>${a.clicks?eur(a.spend/a.clicks):"–"}</td><td>${a.atc}</td><td>${a.conv}</td><td>${eur(a.value)}</td><td><b>${a.spend?(a.value/a.spend).toFixed(2)+"x":"–"}</b></td></tr>`).join("");
+
+  // Google 12 Ads
+  const gads = DATA.google_ads || [];
+  document.getElementById("tGoogAds").innerHTML = `<tr><th>Marca (Ad Group)</th><th>Ángulo Copy RSA</th><th>URL Visible</th><th>URL Final</th><th>Estado</th><th>Gasto</th><th>Impr</th><th>Clics</th><th>Conv</th><th>ROAS</th></tr>` +
+    gads.map(a=>`<tr><td><b>${a.adgroup}</b></td><td>${a.angle}</td><td><code>${a.display_url}</code></td><td><a href="${a.final_url}" target="_blank" style="color:var(--ink)">${a.final_url.replace("https://nahiahome.com","")}</a></td><td>${badge(a.status)}</td><td>${eur(a.spend)}</td><td>${a.impr}</td><td>${a.clicks}</td><td>${a.conv.toFixed(1)}</td><td><b>${a.spend?(a.value/a.spend).toFixed(2)+"x":"–"}</b></td></tr>`).join("");
+
+  // Daily chart
+  const dList = DATA.daily || [];
+  new Chart(document.getElementById("chDaily"), {
+    type: "bar",
+    data: {
+      labels: dList.map(x=>x.d.slice(5)),
+      datasets: [
+        {label:"Gasto Google (€)", data:dList.map(x=>x.google_spend), backgroundColor:"#c9a227"},
+        {label:"Gasto Meta (€)", data:dList.map(x=>x.meta_spend), backgroundColor:"#4a6fa5"},
+        {type:"line", label:"Ventas Netas (€)", data:dList.map(x=>x.net_sales), borderColor:"#2f7d55", backgroundColor:"#2f7d55", tension:.3}
+      ]
+    },
+    options: {plugins:{legend:{position:"bottom"}}, scales:{y:{ticks:{callback:v=>v+" €"}}}}
+  });
+}
+
+async function sha256(str){
+  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(str));
+  return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
+}
+const AUTH_HASH = "3f9fe0cf8466ed9e8e396636892f82d9e7e26b86c974f012efa21dd85d87296d"; // nahia2026
+function checkAuth(){
+  if(localStorage.getItem("nahia_auth") === AUTH_HASH){
+    document.getElementById("loginOverlay").style.display = "none";
+  }
+}
+async function handleLogin(e){
+  e.preventDefault();
+  const hash = await sha256(document.getElementById("pwdInput").value);
+  if(hash === AUTH_HASH){
+    localStorage.setItem("nahia_auth", hash);
+    document.getElementById("loginOverlay").style.display = "none";
+  } else {
+    document.getElementById("loginErr").style.display = "block";
+  }
+}
+checkAuth();
+render();
+</script>
+</body>
+</html>
