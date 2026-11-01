@@ -251,8 +251,10 @@ async function sha256(str){
   return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
 }
 const VALID_HASHES = [
-  "0450cf0cacff771a86995449e3b7e4f1cd939574bf4cc5ab002fcae9c746fa0e", // Nahiajose16
-  "5a0f23803e6a3b703a720fec9799958d6bd8d4b1a76699f180277a167c1bd887"  // nahiajose16
+  "b83dc330dab18d589011b5ab637d997011270b1b3cf8a3fa76f92901858d3dad", // nahiajose26
+  "4b169e92fb51178c90065079408f584a56cdf9f0aefbd08aaac79577e042b63f", // Nahiajose26
+  "0450cf0cacff771a86995449e3b7e4f1cd939574bf4cc5ab002fcae9c746fa0e", // Nahiajose16 fallback
+  "5a0f23803e6a3b703a720fec9799958d6bd8d4b1a76699f180277a167c1bd887"  // nahiajose16 fallback
 ];
 function checkAuth(){
   const saved = localStorage.getItem("nahia_ads_auth");
