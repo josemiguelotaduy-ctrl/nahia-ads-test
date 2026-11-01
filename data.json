@@ -1,10 +1,10 @@
 {
   "generated": "2026-11-01 21:35",
   "summary": {
-    "total_spend": 9.65,
-    "google_spend": 4.34,
+    "total_spend": 25.94,
+    "google_spend": 20.63,
     "meta_spend": 5.31,
-    "today_spend": 9.65,
+    "today_spend": 25.94,
     "daily_rate": 32.5,
     "net_sales": 80.9,
     "orders": 1,
@@ -16,7 +16,7 @@
   "daily": [
     {
       "d": "2026-11-01",
-      "google_spend": 4.34,
+      "google_spend": 20.63,
       "meta_spend": 5.31,
       "net_sales": 80.9,
       "orders": 1
@@ -28,7 +28,7 @@
       "name": "Sales-Shopping-1",
       "status": "ENABLED",
       "daily_budget": 0.0,
-      "spend": 4.34,
+      "spend": 20.63,
       "impr": 321,
       "clicks": 2,
       "conv": 0.0,
