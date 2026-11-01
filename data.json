@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-01 18:18",
+  "generated": "2026-11-01 18:20",
   "summary": {
     "total_spend": 18.02,
     "google_spend": 16.64,
@@ -29,7 +29,7 @@
       "status": "ENABLED",
       "daily_budget": 6.5,
       "spend": 4.14,
-      "impr": 617,
+      "impr": 624,
       "clicks": 12,
       "conv": 0.0,
       "value": 0.0
@@ -75,7 +75,7 @@
       "campaign": "G1_Nov2026_Shopping_ManualCPC_ArmA",
       "status": "ENABLED",
       "spend": 4.14,
-      "impr": 617,
+      "impr": 624,
       "clicks": 12,
       "conv": 0.0,
       "value": 0.0
