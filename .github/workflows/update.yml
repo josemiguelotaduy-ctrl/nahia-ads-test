@@ -1,8 +1,9 @@
 name: Update Ads Test Lab
 on:
   schedule:
-    # Actualización automática cada hora en la nube (24/7)
-    - cron: "5 * * * *"
+    # Una vez al día a las 09:00 Madrid (08:00 UTC invierno, 07:00 UTC verano)
+    - cron: "0 7 * * *"
+    - cron: "0 8 * * *"
   workflow_dispatch: {}
 permissions:
   contents: write
