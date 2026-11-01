@@ -3,7 +3,9 @@
 Standalone November 2026 Ads A/B Test Lab Builder (100% separate from the P&L dashboard).
 Publishes to https://josemiguelotaduy-ctrl.github.io/nahia-ads-test/
 """
+import csv
 import datetime as dt
+import io
 import json
 import os
 import subprocess
@@ -165,10 +167,47 @@ def main():
     except Exception as e:
         print("Meta fetch warning:", e)
 
-    # 3. Fetch Google Ads API v26 (Nov daily spend + 3 Test Campaigns + 8 Ad Groups + 12 Search Ads)
+    # 3. Fetch Google Ads: Sheet CSV (24/7 reliable cloud data) + API v26
     google_campaigns = []
     google_adgroups = []
     google_ads = []
+
+    sheet_url = env.get("GOOGLE_ADS_SHEET_CSV", "https://docs.google.com/spreadsheets/d/e/2PACX-1vTigRKjvzR3V2H9ZvjaItfpOBkziVIGav0rxEvlbIouN_mrxctnAsJUmfjtmpqL-R2zevo2oVcj4Nn8/pub?gid=271399287&single=true&output=csv")
+    if sheet_url:
+        try:
+            raw_csv = urllib.request.urlopen(sheet_url, timeout=30).read().decode("utf-8")
+            for r in csv.DictReader(io.StringIO(raw_csv)):
+                d_s = r.get("date", "")
+                if d_s >= START_DATE and d_s <= today_str:
+                    c_name = r.get("campaign", "")
+                    cost = float(r.get("cost", 0) or 0)
+                    clicks = int(float(r.get("clicks", 0) or 0))
+                    impr = int(float(r.get("impressions", 0) or 0))
+                    conv = float(r.get("conversions", 0) or 0)
+                    val = float(r.get("conversions_value", 0) or 0)
+                    daily[d_s]["google_spend"] += round(cost, 2)
+                    existing = next((c for c in google_campaigns if c["name"] == c_name), None)
+                    if existing:
+                        existing["spend"] += round(cost, 2)
+                        existing["impr"] += impr
+                        existing["clicks"] += clicks
+                        existing["conv"] += round(conv, 2)
+                        existing["value"] += round(val, 2)
+                    else:
+                        google_campaigns.append({
+                            "id": "sheet_" + c_name,
+                            "name": c_name,
+                            "status": "ENABLED",
+                            "daily_budget": 0.0,
+                            "spend": round(cost, 2),
+                            "impr": impr,
+                            "clicks": clicks,
+                            "conv": round(conv, 2),
+                            "value": round(val, 2),
+                        })
+        except Exception as e:
+            print("Google Sheet fetch warning:", e)
+
     try:
         tok_data = urllib.parse.urlencode({
             "client_id": env["GOOGLE_ADS_CLIENT_ID"],
@@ -186,10 +225,14 @@ def main():
         }
         # Daily account spend in Nov
         q_day = f"SELECT segments.date, metrics.cost_micros FROM customer WHERE segments.date BETWEEN '{START_DATE}' AND '{today_str}'"
+        api_daily_sp = {}
         for row in http_json(f"https://googleads.googleapis.com/v26/customers/{cid}/googleAds:search",
                              data=json.dumps({"query": q_day}).encode(), headers=g_headers).get("results", []):
             d_s = row["segments"]["date"]
-            daily[d_s]["google_spend"] += round(float(row.get("metrics", {}).get("costMicros", 0)) / 1e6, 2)
+            api_daily_sp[d_s] = round(float(row.get("metrics", {}).get("costMicros", 0)) / 1e6, 2)
+        if api_daily_sp:
+            for d_s, sp in api_daily_sp.items():
+                daily[d_s]["google_spend"] = sp
 
         # Campaigns metadata + metrics
         q_cm = "SELECT campaign.id, campaign.name, campaign.status, campaign_budget.amount_micros FROM campaign WHERE campaign.name LIKE '%Nov2026%' AND campaign.status != 'REMOVED'"
