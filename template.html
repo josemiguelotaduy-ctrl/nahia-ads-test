@@ -251,10 +251,14 @@ async function sha256(str){
   return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
 }
 const VALID_HASHES = [
+  "6fad0de636a61c44c5f31f2080ad8d38e4228b72dced71a297b347d0740c9dea", // nahia
+  "24a3023a0f8d583626346f4ebd54cad5503b576711825e6009639a0323a22f8c", // Nahia
+  "3f9fe0cf8466ed9e8e396636892f82d9e7e26b86c974f012efa21dd85d87296d", // nahia2026
+  "8961fada71905662d5c797ed24ce9060935413c0f2f8b9d3787ad0e1ed5141a1", // Nahia2026
   "b83dc330dab18d589011b5ab637d997011270b1b3cf8a3fa76f92901858d3dad", // nahiajose26
   "4b169e92fb51178c90065079408f584a56cdf9f0aefbd08aaac79577e042b63f", // Nahiajose26
-  "0450cf0cacff771a86995449e3b7e4f1cd939574bf4cc5ab002fcae9c746fa0e", // Nahiajose16 fallback
-  "5a0f23803e6a3b703a720fec9799958d6bd8d4b1a76699f180277a167c1bd887"  // nahiajose16 fallback
+  "5a0f23803e6a3b703a720fec9799958d6bd8d4b1a76699f180277a167c1bd887", // nahiajose16
+  "0450cf0cacff771a86995449e3b7e4f1cd939574bf4cc5ab002fcae9c746fa0e"  // Nahiajose16
 ];
 function checkAuth(){
   const saved = localStorage.getItem("nahia_ads_auth");
@@ -268,7 +272,8 @@ async function handleLogin(e){
   e.preventDefault();
   const val = document.getElementById("pwdInput").value.trim();
   const hash = await sha256(val);
-  if(VALID_HASHES.includes(hash)){
+  const hashLower = await sha256(val.toLowerCase());
+  if(VALID_HASHES.includes(hash) || VALID_HASHES.includes(hashLower)){
     localStorage.setItem("nahia_ads_auth", hash);
     document.getElementById("loginOverlay").style.display = "none";
   } else {
