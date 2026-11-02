@@ -1,4 +1,5 @@
 from http.server import BaseHTTPRequestHandler
+import datetime as dt
 import json
 import os
 import re
@@ -54,33 +55,101 @@ def google_set_status(env, camp_id, status):
     )
     return json.load(urllib.request.urlopen(req, timeout=15))
 
+def get_fresh_data():
+    # 1. Try live GitHub raw with cache-busting timestamp
+    try:
+        t_now = int(dt.datetime.now().timestamp())
+        url = f"https://raw.githubusercontent.com/josemiguelotaduy-ctrl/nahia-ads-test/main/data.json?_t={t_now}"
+        req = urllib.request.Request(url, headers={"User-Agent": "NahiaTelegramBot"})
+        with urllib.request.urlopen(req, timeout=4) as resp:
+            return json.load(resp)
+    except Exception:
+        pass
+    # 2. Fallback to bundled local data.json
+    if os.path.exists(DATA_PATH):
+        try:
+            with open(DATA_PATH) as f:
+                return json.load(f)
+        except Exception:
+            pass
+    return {}
+
+def build_live_context(d):
+    if not d:
+        return "Gasto y métricas sincronizándose actualmente."
+
+    s = d.get("summary", {})
+    m_as = d.get("meta_adsets", [])
+    g_c = d.get("google_campaigns", [])
+    daily = d.get("daily", [])
+
+    tot_spend = float(s.get("total_spend", 0))
+    today_spend = float(s.get("today_spend", 0))
+    net_sales = float(s.get("net_sales", 0))
+    orders = int(s.get("orders", 0))
+    test_clicks = int(s.get("test_clicks", 0))
+    roas = (net_sales / tot_spend) if tot_spend > 0 else 0
+
+    ma = next((a for a in m_as if "ArmA" in a.get("name", "")), {"clicks": 0, "spend": 0, "conv": 0, "atc": 0})
+    mb = next((a for a in m_as if "ArmB" in a.get("name", "")), {"clicks": 0, "spend": 0, "conv": 0, "atc": 0})
+    ret = next((a for a in m_as if "Retargeting" in a.get("name", "")), {"clicks": 0, "spend": 0, "conv": 0, "atc": 0})
+
+    g1a = next((c for c in g_c if "ArmA" in c.get("name", "")), {"clicks": 0, "spend": 0})
+    g1b = next((c for c in g_c if "ArmB" in c.get("name", "")), {"clicks": 0, "spend": 0})
+    g2 = next((c for c in g_c if "Search" in c.get("name", "")), {"clicks": 0, "spend": 0})
+
+    today_d = daily[-1] if daily else {}
+    today_sales = today_d.get("net_sales", 0)
+    today_orders = today_d.get("orders", 0)
+    today_meta = today_d.get("meta_spend", 0)
+    today_google = today_d.get("google_spend", 0)
+
+    return f"""
+RESUMEN GENERAL NOVIEMBRE:
+- Gasto acumulado Nov: {tot_spend:.2f}€ de los 1.000€ de presupuesto (quedan {max(0, 1000 - tot_spend):.0f}€).
+- Ventas totales Shopify Nov: {net_sales:.0f}€ ({orders} pedidos). ROAS global: {roas:.1f}x.
+- Clics totales enviados a la web: {test_clicks} clics cualificados.
+
+MÉTRICAS ESPECÍFICAS DE HOY:
+- Gasto de hoy: {today_spend:.2f}€ (Google: {today_google:.2f}€, Meta: {today_meta:.2f}€). Tope diario seguro: 32,50€/día.
+- Ventas de hoy: {today_sales:.0f}€ ({today_orders} pedidos en la tienda).
+
+BATALLA A/B EN DIRECTO:
+• Meta Ads:
+  - Arm B (Catálogo Dinámico 238 SKU): {mb.get('spend', 0)}€ gastados, {mb.get('clicks', 0)} clics (CPC muy bajo 0,14€), {mb.get('atc', 0)} carritos, {mb.get('conv', 0)} compras. ¡VA GANANDO CON CLARIDAD!
+  - Arm A (Carrusel Editorial): {ma.get('spend', 0)}€ gastados, {ma.get('clicks', 0)} clics (CPC más caro), {ma.get('atc', 0)} carritos, 0 compras. Va lento.
+  - Retargeting Caliente (Warm 30d): {ret.get('spend', 0)}€ gastados, {ret.get('clicks', 0)} clics, {ret.get('conv', 0)} compras directas. Convirtiendo a ROAS muy alto.
+• Google Ads:
+  - Shopping Arm A (Manual CPC): {g1a.get('spend', 0)}€, {g1a.get('clicks', 0)} clics. Mucho volumen y clics a 0,33€.
+  - Shopping Arm B (Smart Bidding): {g1b.get('spend', 0)}€, {g1b.get('clicks', 0)} clics. Algoritmo aprendiendo.
+  - Search Marcas Lujo: {g2.get('spend', 0)}€, {g2.get('clicks', 0)} clics.
+"""
+
 def call_gemini(user_prompt, summary_ctx, key):
     system_instruction = f"""
 Estás chateando por Telegram con Jose Miguel, fundador de Nahia Home (tu socio). Eres su director de marketing digital.
 
-ESTILO DE CHAT TELEGRAM (OBLIGATORIO):
-- Escribe exactamente como chatea una persona real por Telegram: MENSAJES CORTOS (máximo 2 a 4 frases).
-- NADA de parrafadas, discursos largos, ni listas rígidas con emojis.
-- NADA de saludos repetitivos como "Hola Jose Miguel" en cada mensaje.
-- Sé directo, cercano, con criterio y naturalidad, como un compañero por WhatsApp.
-- Si te pregunta tu opinión o cómo ve el día, dile lo que piensas con franqueza y claridad.
+REGLAS DE TONO (OBLIGATORIO):
+- Chatea como un socio real por WhatsApp/Telegram: MENSAJES CORTOS (máximo 2 a 4 frases directas).
+- Cero saludos pesados tipo "Hola Jose Miguel". Entra directo al grano.
+- Cero listas largas o informes formales con 10 viñetas. Responde exactamente a lo que te pregunte.
+- Criterio directo: si te pregunta cómo vamos, dale la foto rápida (ventas, gasto y quién va ganando). Si pregunta por un canal en concreto (ej. carrusel, catálogo, google), dale el dato exacto de ese canal.
 
-DATOS EN VIVO DEL TEST HOY:
+DATOS EN TIEMPO REAL DEL TEST:
 {summary_ctx}
 
-REGLAS DE NAHIA HOME (INTERIORIZADAS, NO LAS RECITES):
-- Techo: 1.000 €/mes combinados.
-- Fase 1: 32,50 €/día hasta el corte del 10 de noviembre.
+REGLAS DE NEGOCIO (APLÍCALAS, NO LAS RECITES):
+- Tope: 1.000 €/mes combinados.
+- Fase 1 (1-10 Nov): ritmo de ~32,50 €/día. El 10 de Noviembre se apagan los perdedores y se concentra el presupuesto.
 - Estética Westwing: cero menciones de envío gratis en anuncios y cero ofertas.
-- Dashboard independiente: https://josemiguelotaduy-ctrl.github.io/nahia-ads-test/
 """
     payload = {
         "contents": [
             {"parts": [{"text": f"{system_instruction}\n\nMensaje de Jose Miguel:\n{user_prompt}"}]}
         ],
         "generationConfig": {
-            "maxOutputTokens": 160,
-            "temperature": 0.7
+            "maxOutputTokens": 180,
+            "temperature": 0.65
         }
     }
     url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key={key}"
@@ -94,11 +163,10 @@ REGLAS DE NAHIA HOME (INTERIORIZADAS, NO LAS RECITES):
             reply = re.sub(r"\s*```$", "", reply)
             return reply
     except Exception as e:
-        return f"He recibido tu mensaje pero hubo un fallo conectando con la IA: {e}"
+        return f"Disculpa Jose, hubo un error temporal conectando con Gemini: {e}"
 
 def handle_incoming_message(text, env):
     t = text.strip().lower()
-    action = "CHAT"
     action_note = ""
 
     if any(w in t for w in ["pausa", "pausar", "para", "parar", "apaga", "apagar"]):
@@ -108,7 +176,6 @@ def handle_incoming_message(text, env):
                     meta_set_status(env, mid, "PAUSED")
                 for gid in ["24417748931", "24417749450", "24417751670"]:
                     google_set_status(env, gid, "PAUSED")
-                action = "PAUSE_ALL"
                 action_note = "Pausadas todas las campañas en Google Ads y Meta Ads."
             except Exception as e:
                 action_note = f"Error al pausar: {e}"
@@ -136,20 +203,9 @@ def handle_incoming_message(text, env):
             except Exception as e:
                 action_note = f"Error al activar: {e}"
 
-    # Load latest stats
-    summary_ctx = "Gasto hoy: 4.41€ (Meta), 0€ (Google). 26 clics, 1 venta (80.90€)."
-    if os.path.exists(DATA_PATH):
-        try:
-            with open(DATA_PATH) as f:
-                d = json.load(f)
-                s = d.get("summary", {})
-                summary_ctx = (
-                    f"Gasto hoy: {s.get('today_spend',0)}€ (Meta: {s.get('meta_spend',0)}€, Google: {s.get('google_spend',0)}€). "
-                    f"Clics test: {s.get('test_clicks',0)}. Ventas Shopify hoy: {s.get('orders',0)} pedidos ({s.get('net_sales',0)}€). "
-                    f"Ritmo Fase 1 previsto: 32.50€/día."
-                )
-        except Exception:
-            pass
+    # Load fresh stats (live cloud)
+    data = get_fresh_data()
+    summary_ctx = build_live_context(data)
 
     gemini_key = env.get("GEMINI_API_KEY", "")
     reply = call_gemini(text, summary_ctx, gemini_key)
