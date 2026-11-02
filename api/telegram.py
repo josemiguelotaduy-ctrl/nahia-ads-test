@@ -5,6 +5,7 @@ import os
 import re
 import urllib.parse
 import urllib.request
+from zoneinfo import ZoneInfo
 
 DATA_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data.json")
 
@@ -126,8 +127,21 @@ BATALLA A/B EN DIRECTO:
 """
 
 def call_gemini(user_prompt, summary_ctx, key):
+    TZ = ZoneInfo("Europe/Madrid")
+    now = dt.datetime.now(TZ)
+    dias_sem = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
+    dia_nombre = dias_sem[now.weekday()]
+    mes_nombre = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"][now.month - 1]
+    fecha_str = f"{dia_nombre}, {now.day} de {mes_nombre} de {now.year} (Hora: {now.strftime('%H:%M')} Madrid)"
+    dias_restantes = max(0, 10 - now.day)
+
     system_instruction = f"""
 Estás chateando por Telegram con Jose Miguel, fundador de Nahia Home (tu socio). Eres su director de marketing digital.
+
+CALENDARIO Y DÍA EXACTO:
+- HOY ES: {fecha_str}.
+- Estamos en el DÍA {now.day} del Test de Noviembre (Fase 1: del 1 al 10 de Noviembre).
+- Quedan {dias_restantes} días para el corte del 10 de Noviembre, donde apagaremos los brazos perdedores y concentraremos el presupuesto.
 
 REGLAS DE TONO (OBLIGATORIO):
 - Chatea como un socio real por WhatsApp/Telegram: MENSAJES CORTOS (máximo 2 a 4 frases directas).
