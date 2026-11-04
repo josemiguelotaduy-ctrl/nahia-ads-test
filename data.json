@@ -1,17 +1,17 @@
 {
-  "generated": "2026-11-04 11:58",
+  "generated": "2026-11-04 12:53",
   "summary": {
-    "total_spend": 93.69,
-    "google_spend": 61.55,
-    "meta_spend": 32.14,
-    "today_spend": 10.14,
+    "total_spend": 95.66,
+    "google_spend": 63.04,
+    "meta_spend": 32.62,
+    "today_spend": 12.11,
     "daily_rate": 32.5,
-    "net_sales": 502.6,
-    "orders": 9,
-    "test_clicks": 406,
-    "meta_test_clicks": 150,
+    "net_sales": 639.6,
+    "orders": 10,
+    "test_clicks": 413,
+    "meta_test_clicks": 154,
     "meta_test_atc": 23,
-    "google_test_clicks": 256
+    "google_test_clicks": 259
   },
   "daily": [
     {
@@ -37,10 +37,10 @@
     },
     {
       "d": "2026-11-04",
-      "google_spend": 5.19,
-      "meta_spend": 4.95,
-      "net_sales": 0.0,
-      "orders": 0
+      "google_spend": 6.68,
+      "meta_spend": 5.43,
+      "net_sales": 137.0,
+      "orders": 1
     }
   ],
   "google_campaigns": [
@@ -93,9 +93,9 @@
       "name": "G1_Nov2026_Shopping_ManualCPC_ArmA",
       "status": "ENABLED",
       "daily_budget": 6.5,
-      "spend": 24.1,
-      "impr": 6139,
-      "clicks": 71,
+      "spend": 24.92,
+      "impr": 6243,
+      "clicks": 73,
       "conv": 1.0,
       "value": 14.0
     },
@@ -104,9 +104,9 @@
       "name": "G1_Nov2026_Shopping_MaxConvValue_ArmB",
       "status": "ENABLED",
       "daily_budget": 6.5,
-      "spend": 23.65,
-      "impr": 3028,
-      "clicks": 46,
+      "spend": 24.32,
+      "impr": 3049,
+      "clicks": 47,
       "conv": 0.0,
       "value": 0.0
     },
@@ -116,35 +116,13 @@
       "status": "ENABLED",
       "daily_budget": 7.0,
       "spend": 1.3,
-      "impr": 80,
+      "impr": 83,
       "clicks": 2,
       "conv": 0.0,
       "value": 0.0
     }
   ],
   "google_adgroups": [
-    {
-      "id": "200398211406",
-      "name": "All_Products_ManualCPC_055",
-      "campaign": "G1_Nov2026_Shopping_ManualCPC_ArmA",
-      "status": "ENABLED",
-      "spend": 24.1,
-      "impr": 6139,
-      "clicks": 71,
-      "conv": 1.0,
-      "value": 14.0
-    },
-    {
-      "id": "208458193904",
-      "name": "All_Products_MaxConvValue",
-      "campaign": "G1_Nov2026_Shopping_MaxConvValue_ArmB",
-      "status": "ENABLED",
-      "spend": 23.65,
-      "impr": 3028,
-      "clicks": 46,
-      "conv": 0.0,
-      "value": 0.0
-    },
     {
       "id": "200398203254",
       "name": "AG4_Livlig_Garden",
@@ -157,12 +135,23 @@
       "value": 0.0
     },
     {
+      "id": "200398211406",
+      "name": "All_Products_ManualCPC_055",
+      "campaign": "G1_Nov2026_Shopping_ManualCPC_ArmA",
+      "status": "ENABLED",
+      "spend": 24.92,
+      "impr": 6243,
+      "clicks": 73,
+      "conv": 1.0,
+      "value": 14.0
+    },
+    {
       "id": "201342417003",
       "name": "AG2_Sabre_Paris",
       "campaign": "G2_Nov2026_Search_LuxuryBrands_Exact",
       "status": "ENABLED",
       "spend": 0.65,
-      "impr": 25,
+      "impr": 26,
       "clicks": 1,
       "conv": 0.0,
       "value": 0.0
@@ -184,7 +173,7 @@
       "campaign": "G2_Nov2026_Search_LuxuryBrands_Exact",
       "status": "ENABLED",
       "spend": 0.0,
-      "impr": 15,
+      "impr": 16,
       "clicks": 0,
       "conv": 0.0,
       "value": 0.0
@@ -195,7 +184,7 @@
       "campaign": "G2_Nov2026_Search_LuxuryBrands_Exact",
       "status": "ENABLED",
       "spend": 0.65,
-      "impr": 20,
+      "impr": 21,
       "clicks": 1,
       "conv": 0.0,
       "value": 0.0
@@ -208,6 +197,17 @@
       "spend": 0.0,
       "impr": 11,
       "clicks": 0,
+      "conv": 0.0,
+      "value": 0.0
+    },
+    {
+      "id": "208458193904",
+      "name": "All_Products_MaxConvValue",
+      "campaign": "G1_Nov2026_Shopping_MaxConvValue_ArmB",
+      "status": "ENABLED",
+      "spend": 24.32,
+      "impr": 3049,
+      "clicks": 47,
       "conv": 0.0,
       "value": 0.0
     }
@@ -247,7 +247,7 @@
       "final_url": "https://nahiahome.com/products/cubiertos-de-servicio-ensalada",
       "status": "ENABLED",
       "spend": 0.65,
-      "impr": 24,
+      "impr": 25,
       "clicks": 1,
       "conv": 0.0,
       "value": 0.0
@@ -299,7 +299,7 @@
       "final_url": "https://nahiahome.com/products/plancha-cirrus-3-iron-sand-steamery",
       "status": "ENABLED",
       "spend": 0.0,
-      "impr": 13,
+      "impr": 14,
       "clicks": 0,
       "conv": 0.0,
       "value": 0.0
@@ -325,7 +325,7 @@
       "final_url": "https://nahiahome.com/products/pie-de-lampara-vert-olive-casa-lopez-paris",
       "status": "ENABLED",
       "spend": 0.65,
-      "impr": 17,
+      "impr": 18,
       "clicks": 1,
       "conv": 0.0,
       "value": 0.0
@@ -377,9 +377,9 @@
       "campaign": "M2_Nov2026_Retargeting_Warm_PanEU",
       "status": "ACTIVE",
       "daily_budget": 2.5,
-      "spend": 6.74,
-      "impr": 1236,
-      "clicks": 50,
+      "spend": 6.88,
+      "impr": 1272,
+      "clicks": 52,
       "atc": 5,
       "conv": 3,
       "value": 115.7
@@ -390,9 +390,9 @@
       "campaign": "M1_Nov2026_Prospecting_Tier1EU_Test",
       "status": "ACTIVE",
       "daily_budget": 5.0,
-      "spend": 11.98,
-      "impr": 1439,
-      "clicks": 71,
+      "spend": 12.26,
+      "impr": 1483,
+      "clicks": 73,
       "atc": 16,
       "conv": 2,
       "value": 94.0
@@ -403,8 +403,8 @@
       "campaign": "M1_Nov2026_Prospecting_Tier1EU_Test",
       "status": "ACTIVE",
       "daily_budget": 5.0,
-      "spend": 13.42,
-      "impr": 1319,
+      "spend": 13.48,
+      "impr": 1333,
       "clicks": 29,
       "atc": 2,
       "conv": 0,
@@ -417,9 +417,9 @@
       "name": "Ad_B1_FullCatalog_Copy1_EditorialHeritage",
       "adset": "ArmB_Catalog_FullSet_Dynamic_35Plus",
       "status": "ACTIVE",
-      "spend": 11.73,
-      "impr": 1398,
-      "clicks": 71,
+      "spend": 12.01,
+      "impr": 1442,
+      "clicks": 73,
       "atc": 16,
       "conv": 2,
       "value": 94.0
@@ -429,9 +429,9 @@
       "name": "Ad_R1_WarmDPA_Copy1_EffortlessElegance",
       "adset": "Warm_PanEU_30d_Retargeting",
       "status": "ACTIVE",
-      "spend": 6.74,
-      "impr": 1223,
-      "clicks": 50,
+      "spend": 6.88,
+      "impr": 1259,
+      "clicks": 52,
       "atc": 5,
       "conv": 3,
       "value": 115.7
@@ -441,8 +441,8 @@
       "name": "Ad_A2_Copy1_HomeBathGarden_EditorialHeritage",
       "adset": "ArmA_Editorial_Carousel_35Plus",
       "status": "ACTIVE",
-      "spend": 7.51,
-      "impr": 734,
+      "spend": 7.53,
+      "impr": 743,
       "clicks": 16,
       "atc": 2,
       "conv": 0,
@@ -453,8 +453,8 @@
       "name": "Ad_A1_Copy2_TableLiving_StatementCraft",
       "adset": "ArmA_Editorial_Carousel_35Plus",
       "status": "ACTIVE",
-      "spend": 1.3,
-      "impr": 182,
+      "spend": 1.31,
+      "impr": 183,
       "clicks": 6,
       "atc": 0,
       "conv": 0,
@@ -465,8 +465,8 @@
       "name": "Ad_A1_Copy1_TableLiving_EditorialHeritage",
       "adset": "ArmA_Editorial_Carousel_35Plus",
       "status": "ACTIVE",
-      "spend": 3.89,
-      "impr": 301,
+      "spend": 3.92,
+      "impr": 304,
       "clicks": 5,
       "atc": 0,
       "conv": 0,
@@ -478,7 +478,7 @@
       "adset": "ArmA_Editorial_Carousel_35Plus",
       "status": "ACTIVE",
       "spend": 0.72,
-      "impr": 102,
+      "impr": 103,
       "clicks": 2,
       "atc": 0,
       "conv": 0,
