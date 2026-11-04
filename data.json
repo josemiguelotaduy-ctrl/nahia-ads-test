@@ -1,17 +1,17 @@
 {
-  "generated": "2026-11-04 18:43",
+  "generated": "2026-11-04 19:45",
   "summary": {
-    "total_spend": 102.47,
-    "google_spend": 66.76,
-    "meta_spend": 35.71,
-    "today_spend": 18.92,
+    "total_spend": 104.43,
+    "google_spend": 68.32,
+    "meta_spend": 36.11,
+    "today_spend": 20.88,
     "daily_rate": 32.5,
     "net_sales": 675.5,
     "orders": 11,
-    "test_clicks": 448,
-    "meta_test_clicks": 180,
+    "test_clicks": 455,
+    "meta_test_clicks": 182,
     "meta_test_atc": 24,
-    "google_test_clicks": 268
+    "google_test_clicks": 273
   },
   "daily": [
     {
@@ -37,8 +37,8 @@
     },
     {
       "d": "2026-11-04",
-      "google_spend": 10.4,
-      "meta_spend": 8.52,
+      "google_spend": 11.96,
+      "meta_spend": 8.92,
       "net_sales": 172.9,
       "orders": 2
     }
@@ -93,9 +93,9 @@
       "name": "G1_Nov2026_Shopping_ManualCPC_ArmA",
       "status": "ENABLED",
       "daily_budget": 6.5,
-      "spend": 27.06,
-      "impr": 6993,
-      "clicks": 78,
+      "spend": 27.88,
+      "impr": 7194,
+      "clicks": 81,
       "conv": 1.0,
       "value": 14.0
     },
@@ -104,9 +104,9 @@
       "name": "G1_Nov2026_Shopping_MaxConvValue_ArmB",
       "status": "ENABLED",
       "daily_budget": 6.5,
-      "spend": 25.9,
-      "impr": 3211,
-      "clicks": 51,
+      "spend": 26.64,
+      "impr": 3240,
+      "clicks": 53,
       "conv": 1.0,
       "value": 137.0
     },
@@ -116,13 +116,35 @@
       "status": "ENABLED",
       "daily_budget": 7.0,
       "spend": 1.3,
-      "impr": 99,
+      "impr": 101,
       "clicks": 2,
       "conv": 0.0,
       "value": 0.0
     }
   ],
   "google_adgroups": [
+    {
+      "id": "200398211406",
+      "name": "All_Products_ManualCPC_055",
+      "campaign": "G1_Nov2026_Shopping_ManualCPC_ArmA",
+      "status": "ENABLED",
+      "spend": 27.88,
+      "impr": 7194,
+      "clicks": 81,
+      "conv": 1.0,
+      "value": 14.0
+    },
+    {
+      "id": "208458193904",
+      "name": "All_Products_MaxConvValue",
+      "campaign": "G1_Nov2026_Shopping_MaxConvValue_ArmB",
+      "status": "ENABLED",
+      "spend": 26.64,
+      "impr": 3240,
+      "clicks": 53,
+      "conv": 1.0,
+      "value": 137.0
+    },
     {
       "id": "200398203254",
       "name": "AG4_Livlig_Garden",
@@ -133,17 +155,6 @@
       "clicks": 0,
       "conv": 0.0,
       "value": 0.0
-    },
-    {
-      "id": "200398211406",
-      "name": "All_Products_ManualCPC_055",
-      "campaign": "G1_Nov2026_Shopping_ManualCPC_ArmA",
-      "status": "ENABLED",
-      "spend": 27.06,
-      "impr": 6993,
-      "clicks": 78,
-      "conv": 1.0,
-      "value": 14.0
     },
     {
       "id": "201342417003",
@@ -195,21 +206,10 @@
       "campaign": "G2_Nov2026_Search_LuxuryBrands_Exact",
       "status": "ENABLED",
       "spend": 0.0,
-      "impr": 16,
+      "impr": 18,
       "clicks": 0,
       "conv": 0.0,
       "value": 0.0
-    },
-    {
-      "id": "208458193904",
-      "name": "All_Products_MaxConvValue",
-      "campaign": "G1_Nov2026_Shopping_MaxConvValue_ArmB",
-      "status": "ENABLED",
-      "spend": 25.9,
-      "impr": 3211,
-      "clicks": 51,
-      "conv": 1.0,
-      "value": 137.0
     }
   ],
   "google_ads": [
@@ -351,7 +351,7 @@
       "final_url": "https://nahiahome.com/products/alfombra-de-bano-de-lino",
       "status": "ENABLED",
       "spend": 0.0,
-      "impr": 16,
+      "impr": 18,
       "clicks": 0,
       "conv": 0.0,
       "value": 0.0
@@ -377,9 +377,9 @@
       "campaign": "M2_Nov2026_Retargeting_Warm_PanEU",
       "status": "ACTIVE",
       "daily_budget": 2.5,
-      "spend": 7.9,
-      "impr": 1449,
-      "clicks": 58,
+      "spend": 8.08,
+      "impr": 1482,
+      "clicks": 59,
       "atc": 5,
       "conv": 3,
       "value": 115.7
@@ -390,9 +390,9 @@
       "campaign": "M1_Nov2026_Prospecting_Tier1EU_Test",
       "status": "ACTIVE",
       "daily_budget": 5.0,
-      "spend": 13.85,
-      "impr": 1747,
-      "clicks": 91,
+      "spend": 14.02,
+      "impr": 1789,
+      "clicks": 92,
       "atc": 17,
       "conv": 3,
       "value": 129.9
@@ -403,8 +403,8 @@
       "campaign": "M1_Nov2026_Prospecting_Tier1EU_Test",
       "status": "ACTIVE",
       "daily_budget": 5.0,
-      "spend": 13.96,
-      "impr": 1446,
+      "spend": 14.01,
+      "impr": 1455,
       "clicks": 31,
       "atc": 2,
       "conv": 0,
@@ -417,9 +417,9 @@
       "name": "Ad_B1_FullCatalog_Copy1_EditorialHeritage",
       "adset": "ArmB_Catalog_FullSet_Dynamic_35Plus",
       "status": "ACTIVE",
-      "spend": 13.6,
-      "impr": 1706,
-      "clicks": 91,
+      "spend": 13.77,
+      "impr": 1748,
+      "clicks": 92,
       "atc": 17,
       "conv": 3,
       "value": 129.9
@@ -429,9 +429,9 @@
       "name": "Ad_R1_WarmDPA_Copy1_EffortlessElegance",
       "adset": "Warm_PanEU_30d_Retargeting",
       "status": "ACTIVE",
-      "spend": 7.9,
-      "impr": 1436,
-      "clicks": 58,
+      "spend": 8.08,
+      "impr": 1469,
+      "clicks": 59,
       "atc": 5,
       "conv": 3,
       "value": 115.7
@@ -441,8 +441,8 @@
       "name": "Ad_A2_Copy1_HomeBathGarden_EditorialHeritage",
       "adset": "ArmA_Editorial_Carousel_35Plus",
       "status": "ACTIVE",
-      "spend": 7.7,
-      "impr": 787,
+      "spend": 7.72,
+      "impr": 792,
       "clicks": 17,
       "atc": 2,
       "conv": 0,
@@ -453,8 +453,8 @@
       "name": "Ad_A1_Copy1_TableLiving_EditorialHeritage",
       "adset": "ArmA_Editorial_Carousel_35Plus",
       "status": "ACTIVE",
-      "spend": 4.04,
-      "impr": 334,
+      "spend": 4.05,
+      "impr": 335,
       "clicks": 6,
       "atc": 0,
       "conv": 0,
@@ -465,8 +465,8 @@
       "name": "Ad_A1_Copy2_TableLiving_StatementCraft",
       "adset": "ArmA_Editorial_Carousel_35Plus",
       "status": "ACTIVE",
-      "spend": 1.49,
-      "impr": 219,
+      "spend": 1.51,
+      "impr": 222,
       "clicks": 6,
       "atc": 0,
       "conv": 0,
