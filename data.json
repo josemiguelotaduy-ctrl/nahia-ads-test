@@ -1,15 +1,15 @@
 {
-  "generated": "2026-11-04 06:48",
+  "generated": "2026-11-04 07:54",
   "summary": {
-    "total_spend": 85.32,
+    "total_spend": 85.83,
     "google_spend": 57.2,
-    "meta_spend": 28.12,
-    "today_spend": 1.79,
+    "meta_spend": 28.63,
+    "today_spend": 2.29,
     "daily_rate": 32.5,
-    "net_sales": 0.0,
-    "orders": 0,
-    "test_clicks": 346,
-    "meta_test_clicks": 127,
+    "net_sales": 502.6,
+    "orders": 9,
+    "test_clicks": 348,
+    "meta_test_clicks": 129,
     "meta_test_atc": 21,
     "google_test_clicks": 219
   },
@@ -18,27 +18,27 @@
       "d": "2026-11-01",
       "google_spend": 22.48,
       "meta_spend": 6.99,
-      "net_sales": 0.0,
-      "orders": 0
+      "net_sales": 242.9,
+      "orders": 2
     },
     {
       "d": "2026-11-02",
       "google_spend": 19.18,
       "meta_spend": 11.3,
-      "net_sales": 0.0,
-      "orders": 0
+      "net_sales": 226.7,
+      "orders": 5
     },
     {
       "d": "2026-11-03",
       "google_spend": 14.7,
-      "meta_spend": 8.88,
-      "net_sales": 0.0,
-      "orders": 0
+      "meta_spend": 8.89,
+      "net_sales": 33.0,
+      "orders": 2
     },
     {
       "d": "2026-11-04",
       "google_spend": 0.84,
-      "meta_spend": 0.95,
+      "meta_spend": 1.45,
       "net_sales": 0.0,
       "orders": 0
     }
@@ -94,7 +94,7 @@
       "status": "ENABLED",
       "daily_budget": 6.5,
       "spend": 23.07,
-      "impr": 5704,
+      "impr": 5733,
       "clicks": 69,
       "conv": 1.0,
       "value": 14.0
@@ -105,7 +105,7 @@
       "status": "ENABLED",
       "daily_budget": 6.5,
       "spend": 20.33,
-      "impr": 2730,
+      "impr": 2748,
       "clicks": 43,
       "conv": 0.0,
       "value": 0.0
@@ -116,35 +116,13 @@
       "status": "ENABLED",
       "daily_budget": 7.0,
       "spend": 1.3,
-      "impr": 73,
+      "impr": 74,
       "clicks": 2,
       "conv": 0.0,
       "value": 0.0
     }
   ],
   "google_adgroups": [
-    {
-      "id": "200398211406",
-      "name": "All_Products_ManualCPC_055",
-      "campaign": "G1_Nov2026_Shopping_ManualCPC_ArmA",
-      "status": "ENABLED",
-      "spend": 23.07,
-      "impr": 5704,
-      "clicks": 69,
-      "conv": 1.0,
-      "value": 14.0
-    },
-    {
-      "id": "208458193904",
-      "name": "All_Products_MaxConvValue",
-      "campaign": "G1_Nov2026_Shopping_MaxConvValue_ArmB",
-      "status": "ENABLED",
-      "spend": 20.33,
-      "impr": 2730,
-      "clicks": 43,
-      "conv": 0.0,
-      "value": 0.0
-    },
     {
       "id": "200398203254",
       "name": "AG4_Livlig_Garden",
@@ -155,6 +133,17 @@
       "clicks": 0,
       "conv": 0.0,
       "value": 0.0
+    },
+    {
+      "id": "200398211406",
+      "name": "All_Products_ManualCPC_055",
+      "campaign": "G1_Nov2026_Shopping_ManualCPC_ArmA",
+      "status": "ENABLED",
+      "spend": 23.07,
+      "impr": 5733,
+      "clicks": 69,
+      "conv": 1.0,
+      "value": 14.0
     },
     {
       "id": "201342417003",
@@ -173,7 +162,7 @@
       "campaign": "G2_Nov2026_Search_LuxuryBrands_Exact",
       "status": "ENABLED",
       "spend": 0.0,
-      "impr": 3,
+      "impr": 4,
       "clicks": 0,
       "conv": 0.0,
       "value": 0.0
@@ -208,6 +197,17 @@
       "spend": 0.0,
       "impr": 11,
       "clicks": 0,
+      "conv": 0.0,
+      "value": 0.0
+    },
+    {
+      "id": "208458193904",
+      "name": "All_Products_MaxConvValue",
+      "campaign": "G1_Nov2026_Shopping_MaxConvValue_ArmB",
+      "status": "ENABLED",
+      "spend": 20.33,
+      "impr": 2748,
+      "clicks": 43,
       "conv": 0.0,
       "value": 0.0
     }
@@ -273,7 +273,7 @@
       "final_url": "https://nahiahome.com/products/jarra-perla",
       "status": "ENABLED",
       "spend": 0.0,
-      "impr": 3,
+      "impr": 4,
       "clicks": 0,
       "conv": 0.0,
       "value": 0.0
@@ -377,8 +377,8 @@
       "campaign": "M2_Nov2026_Retargeting_Warm_PanEU",
       "status": "ACTIVE",
       "daily_budget": 2.5,
-      "spend": 5.65,
-      "impr": 1038,
+      "spend": 5.74,
+      "impr": 1070,
       "clicks": 36,
       "atc": 5,
       "conv": 3,
@@ -390,9 +390,9 @@
       "campaign": "M1_Nov2026_Prospecting_Tier1EU_Test",
       "status": "ACTIVE",
       "daily_budget": 5.0,
-      "spend": 10.1,
-      "impr": 1165,
-      "clicks": 66,
+      "spend": 10.27,
+      "impr": 1210,
+      "clicks": 68,
       "atc": 14,
       "conv": 2,
       "value": 94.0
@@ -403,8 +403,8 @@
       "campaign": "M1_Nov2026_Prospecting_Tier1EU_Test",
       "status": "ACTIVE",
       "daily_budget": 5.0,
-      "spend": 12.37,
-      "impr": 1176,
+      "spend": 12.62,
+      "impr": 1213,
       "clicks": 25,
       "atc": 2,
       "conv": 0,
@@ -417,9 +417,9 @@
       "name": "Ad_B1_FullCatalog_Copy1_EditorialHeritage",
       "adset": "ArmB_Catalog_FullSet_Dynamic_35Plus",
       "status": "ACTIVE",
-      "spend": 9.85,
-      "impr": 1124,
-      "clicks": 66,
+      "spend": 10.02,
+      "impr": 1169,
+      "clicks": 68,
       "atc": 14,
       "conv": 2,
       "value": 94.0
@@ -429,8 +429,8 @@
       "name": "Ad_R1_WarmDPA_Copy1_EffortlessElegance",
       "adset": "Warm_PanEU_30d_Retargeting",
       "status": "ACTIVE",
-      "spend": 5.65,
-      "impr": 1025,
+      "spend": 5.74,
+      "impr": 1057,
       "clicks": 36,
       "atc": 5,
       "conv": 3,
@@ -441,8 +441,8 @@
       "name": "Ad_A2_Copy1_HomeBathGarden_EditorialHeritage",
       "adset": "ArmA_Editorial_Carousel_35Plus",
       "status": "ACTIVE",
-      "spend": 6.86,
-      "impr": 641,
+      "spend": 7.11,
+      "impr": 675,
       "clicks": 14,
       "atc": 2,
       "conv": 0,
@@ -454,7 +454,7 @@
       "adset": "ArmA_Editorial_Carousel_35Plus",
       "status": "ACTIVE",
       "spend": 3.79,
-      "impr": 284,
+      "impr": 286,
       "clicks": 5,
       "atc": 0,
       "conv": 0,
@@ -478,7 +478,7 @@
       "adset": "ArmA_Editorial_Carousel_35Plus",
       "status": "ACTIVE",
       "spend": 0.69,
-      "impr": 89,
+      "impr": 90,
       "clicks": 2,
       "atc": 0,
       "conv": 0,
