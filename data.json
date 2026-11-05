@@ -1,17 +1,17 @@
 {
-  "generated": "2026-11-05 05:49",
+  "generated": "2026-11-05 06:50",
   "summary": {
-    "total_spend": 111.62,
-    "google_spend": 73.34,
-    "meta_spend": 38.28,
-    "today_spend": 1.67,
+    "total_spend": 111.83,
+    "google_spend": 73.52,
+    "meta_spend": 38.31,
+    "today_spend": 1.88,
     "daily_rate": 32.5,
     "net_sales": 675.5,
     "orders": 11,
-    "test_clicks": 484,
+    "test_clicks": 485,
     "meta_test_clicks": 199,
     "meta_test_atc": 26,
-    "google_test_clicks": 285
+    "google_test_clicks": 286
   },
   "daily": [
     {
@@ -44,8 +44,8 @@
     },
     {
       "d": "2026-11-05",
-      "google_spend": 1.24,
-      "meta_spend": 0.43,
+      "google_spend": 1.42,
+      "meta_spend": 0.46,
       "net_sales": 0.0,
       "orders": 0
     }
@@ -101,7 +101,7 @@
       "status": "ENABLED",
       "daily_budget": 6.5,
       "spend": 30.44,
-      "impr": 7789,
+      "impr": 7806,
       "clicks": 88,
       "conv": 1.0,
       "value": 14.0
@@ -111,9 +111,9 @@
       "name": "G1_Nov2026_Shopping_MaxConvValue_ArmB",
       "status": "ENABLED",
       "daily_budget": 6.5,
-      "spend": 27.22,
-      "impr": 3316,
-      "clicks": 55,
+      "spend": 27.4,
+      "impr": 3328,
+      "clicks": 56,
       "conv": 1.0,
       "value": 137.0
     },
@@ -147,7 +147,7 @@
       "campaign": "G1_Nov2026_Shopping_ManualCPC_ArmA",
       "status": "ENABLED",
       "spend": 30.44,
-      "impr": 7789,
+      "impr": 7806,
       "clicks": 88,
       "conv": 1.0,
       "value": 14.0
@@ -212,9 +212,9 @@
       "name": "All_Products_MaxConvValue",
       "campaign": "G1_Nov2026_Shopping_MaxConvValue_ArmB",
       "status": "ENABLED",
-      "spend": 27.22,
-      "impr": 3316,
-      "clicks": 55,
+      "spend": 27.4,
+      "impr": 3328,
+      "clicks": 56,
       "conv": 1.0,
       "value": 137.0
     }
@@ -397,8 +397,8 @@
       "campaign": "M1_Nov2026_Prospecting_Tier1EU_Test",
       "status": "ACTIVE",
       "daily_budget": 5.0,
-      "spend": 15.55,
-      "impr": 1933,
+      "spend": 15.57,
+      "impr": 1941,
       "clicks": 98,
       "atc": 19,
       "conv": 3,
@@ -410,8 +410,8 @@
       "campaign": "M1_Nov2026_Prospecting_Tier1EU_Test",
       "status": "ACTIVE",
       "daily_budget": 5.0,
-      "spend": 14.28,
-      "impr": 1517,
+      "spend": 14.29,
+      "impr": 1518,
       "clicks": 33,
       "atc": 2,
       "conv": 0,
@@ -424,8 +424,8 @@
       "name": "Ad_B1_FullCatalog_Copy1_EditorialHeritage",
       "adset": "ArmB_Catalog_FullSet_Dynamic_35Plus",
       "status": "ACTIVE",
-      "spend": 15.3,
-      "impr": 1892,
+      "spend": 15.32,
+      "impr": 1900,
       "clicks": 98,
       "atc": 19,
       "conv": 3,
@@ -472,8 +472,8 @@
       "name": "Ad_A1_Copy2_TableLiving_StatementCraft",
       "adset": "ArmA_Editorial_Carousel_35Plus",
       "status": "ACTIVE",
-      "spend": 1.6,
-      "impr": 236,
+      "spend": 1.61,
+      "impr": 237,
       "clicks": 6,
       "atc": 0,
       "conv": 0,
