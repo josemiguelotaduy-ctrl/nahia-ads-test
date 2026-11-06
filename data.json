@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-06 02:58",
+  "generated": "2026-11-06 03:48",
   "summary": {
     "total_spend": 137.94,
     "google_spend": 88.86,
@@ -108,7 +108,7 @@
       "status": "ENABLED",
       "daily_budget": 6.5,
       "spend": 38.0,
-      "impr": 10702,
+      "impr": 10712,
       "clicks": 110,
       "conv": 1.0,
       "value": 14.0
@@ -119,7 +119,7 @@
       "status": "ENABLED",
       "daily_budget": 6.5,
       "spend": 32.61,
-      "impr": 5248,
+      "impr": 5254,
       "clicks": 78,
       "conv": 1.0,
       "value": 137.0
@@ -154,7 +154,7 @@
       "campaign": "G1_Nov2026_Shopping_ManualCPC_ArmA",
       "status": "ENABLED",
       "spend": 38.0,
-      "impr": 10702,
+      "impr": 10712,
       "clicks": 110,
       "conv": 1.0,
       "value": 14.0
@@ -220,7 +220,7 @@
       "campaign": "G1_Nov2026_Shopping_MaxConvValue_ArmB",
       "status": "ENABLED",
       "spend": 32.61,
-      "impr": 5248,
+      "impr": 5254,
       "clicks": 78,
       "conv": 1.0,
       "value": 137.0
@@ -392,7 +392,7 @@
       "status": "ACTIVE",
       "daily_budget": 2.5,
       "spend": 10.79,
-      "impr": 2130,
+      "impr": 2133,
       "clicks": 86,
       "atc": 5,
       "conv": 3,
@@ -405,7 +405,7 @@
       "status": "ACTIVE",
       "daily_budget": 5.0,
       "spend": 21.4,
-      "impr": 2855,
+      "impr": 2857,
       "clicks": 170,
       "atc": 27,
       "conv": 6,
@@ -432,7 +432,7 @@
       "adset": "ArmB_Catalog_FullSet_Dynamic_35Plus",
       "status": "ACTIVE",
       "spend": 21.15,
-      "impr": 2814,
+      "impr": 2816,
       "clicks": 170,
       "atc": 27,
       "conv": 6,
@@ -444,7 +444,7 @@
       "adset": "Warm_PanEU_30d_Retargeting",
       "status": "ACTIVE",
       "spend": 10.79,
-      "impr": 2116,
+      "impr": 2119,
       "clicks": 86,
       "atc": 5,
       "conv": 3,
