@@ -249,6 +249,8 @@ def main():
             c_map[r["campaign"]["id"]]["clicks"] += int(float(m.get("clicks", 0)))
             c_map[r["campaign"]["id"]]["conv"] += float(m.get("conversions", 0))
             c_map[r["campaign"]["id"]]["value"] += float(m.get("conversionsValue", 0))
+        if res_cm:
+            google_campaigns = []
         for r in res_cm:
             c = r["campaign"]
             mm = c_map[c["id"]]
