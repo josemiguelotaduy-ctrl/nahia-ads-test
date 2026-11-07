@@ -1,17 +1,17 @@
 {
-  "generated": "2026-11-07 15:40",
+  "generated": "2026-11-07 16:27",
   "summary": {
-    "total_spend": 184.67,
-    "google_spend": 110.91,
-    "meta_spend": 73.76,
-    "today_spend": 18.97,
+    "total_spend": 186.57,
+    "google_spend": 111.94,
+    "meta_spend": 74.63,
+    "today_spend": 20.87,
     "daily_rate": 32.5,
     "net_sales": 954.8,
     "orders": 14,
-    "test_clicks": 696,
-    "meta_test_clicks": 413,
+    "test_clicks": 706,
+    "meta_test_clicks": 416,
     "meta_test_atc": 41,
-    "google_test_clicks": 283
+    "google_test_clicks": 290
   },
   "daily": [
     {
@@ -58,8 +58,8 @@
     },
     {
       "d": "2026-11-07",
-      "google_spend": 8.63,
-      "meta_spend": 10.34,
+      "google_spend": 9.66,
+      "meta_spend": 11.21,
       "net_sales": 0.0,
       "orders": 0
     }
@@ -70,9 +70,9 @@
       "name": "Sales-Shopping-1",
       "status": "ENABLED",
       "daily_budget": 17.5,
-      "spend": 12.5,
-      "impr": 2295,
-      "clicks": 23,
+      "spend": 12.96,
+      "impr": 2447,
+      "clicks": 27,
       "conv": 0.0,
       "value": 0.0
     },
@@ -81,9 +81,9 @@
       "name": "G1_Nov2026_Shopping_ManualCPC_ArmA",
       "status": "PAUSED",
       "daily_budget": 4.5,
-      "spend": 47.18,
-      "impr": 14413,
-      "clicks": 136,
+      "spend": 47.59,
+      "impr": 14463,
+      "clicks": 137,
       "conv": 1.0,
       "value": 14.0
     },
@@ -92,9 +92,9 @@
       "name": "G1_Nov2026_Shopping_MaxConvValue_ArmB",
       "status": "PAUSED",
       "daily_budget": 10.5,
-      "spend": 42.94,
-      "impr": 9632,
-      "clicks": 111,
+      "spend": 43.1,
+      "impr": 9754,
+      "clicks": 113,
       "conv": 1.0,
       "value": 137.0
     },
@@ -104,13 +104,35 @@
       "status": "PAUSED",
       "daily_budget": 2.5,
       "spend": 8.29,
-      "impr": 207,
+      "impr": 208,
       "clicks": 13,
       "conv": 0.0,
       "value": 0.0
     }
   ],
   "google_adgroups": [
+    {
+      "id": "200398211406",
+      "name": "All_Products_ManualCPC_055",
+      "campaign": "G1_Nov2026_Shopping_ManualCPC_ArmA",
+      "status": "ENABLED",
+      "spend": 47.59,
+      "impr": 14463,
+      "clicks": 137,
+      "conv": 1.0,
+      "value": 14.0
+    },
+    {
+      "id": "208458193904",
+      "name": "All_Products_MaxConvValue",
+      "campaign": "G1_Nov2026_Shopping_MaxConvValue_ArmB",
+      "status": "ENABLED",
+      "spend": 43.1,
+      "impr": 9754,
+      "clicks": 113,
+      "conv": 1.0,
+      "value": 137.0
+    },
     {
       "id": "200398203254",
       "name": "AG4_Livlig_Garden",
@@ -121,17 +143,6 @@
       "clicks": 0,
       "conv": 0.0,
       "value": 0.0
-    },
-    {
-      "id": "200398211406",
-      "name": "All_Products_ManualCPC_055",
-      "campaign": "G1_Nov2026_Shopping_ManualCPC_ArmA",
-      "status": "ENABLED",
-      "spend": 47.18,
-      "impr": 14413,
-      "clicks": 136,
-      "conv": 1.0,
-      "value": 14.0
     },
     {
       "id": "201342417003",
@@ -172,7 +183,7 @@
       "campaign": "G2_Nov2026_Search_LuxuryBrands_Exact",
       "status": "ENABLED",
       "spend": 4.48,
-      "impr": 59,
+      "impr": 60,
       "clicks": 7,
       "conv": 0.0,
       "value": 0.0
@@ -187,17 +198,6 @@
       "clicks": 0,
       "conv": 0.0,
       "value": 0.0
-    },
-    {
-      "id": "208458193904",
-      "name": "All_Products_MaxConvValue",
-      "campaign": "G1_Nov2026_Shopping_MaxConvValue_ArmB",
-      "status": "ENABLED",
-      "spend": 42.94,
-      "impr": 9632,
-      "clicks": 111,
-      "conv": 1.0,
-      "value": 137.0
     }
   ],
   "google_ads": [
@@ -313,7 +313,7 @@
       "final_url": "https://nahiahome.com/products/pie-de-lampara-vert-olive-casa-lopez-paris",
       "status": "ENABLED",
       "spend": 3.18,
-      "impr": 52,
+      "impr": 53,
       "clicks": 5,
       "conv": 0.0,
       "value": 0.0
@@ -365,9 +365,9 @@
       "campaign": "M2_Nov2026_Retargeting_Warm_PanEU",
       "status": "ACTIVE",
       "daily_budget": 4.0,
-      "spend": 15.0,
-      "impr": 3185,
-      "clicks": 131,
+      "spend": 15.06,
+      "impr": 3204,
+      "clicks": 134,
       "atc": 12,
       "conv": 3,
       "value": 115.7
@@ -378,8 +378,8 @@
       "campaign": "M1_Nov2026_Prospecting_Tier1EU_Test",
       "status": "ACTIVE",
       "daily_budget": 11.0,
-      "spend": 30.66,
-      "impr": 3945,
+      "spend": 31.45,
+      "impr": 3996,
       "clicks": 202,
       "atc": 27,
       "conv": 6,
@@ -391,8 +391,8 @@
       "campaign": "M1_Nov2026_Prospecting_Tier1EU_Test",
       "status": "PAUSED",
       "daily_budget": 5.0,
-      "spend": 28.1,
-      "impr": 3301,
+      "spend": 28.12,
+      "impr": 3304,
       "clicks": 80,
       "atc": 2,
       "conv": 0,
@@ -417,9 +417,9 @@
       "name": "Ad_R1_WarmDPA_Copy1_EffortlessElegance",
       "adset": "Warm_PanEU_30d_Retargeting",
       "status": "ACTIVE",
-      "spend": 15.0,
-      "impr": 3171,
-      "clicks": 131,
+      "spend": 15.06,
+      "impr": 3190,
+      "clicks": 134,
       "atc": 12,
       "conv": 3,
       "value": 115.7
@@ -429,8 +429,8 @@
       "name": "Ad_B2_FullCatalog_Copy2_StatementCraft",
       "adset": "ArmB_Catalog_FullSet_Dynamic_35Plus",
       "status": "ACTIVE",
-      "spend": 9.19,
-      "impr": 1090,
+      "spend": 9.98,
+      "impr": 1141,
       "clicks": 31,
       "atc": 0,
       "conv": 0,
@@ -442,7 +442,7 @@
       "adset": "ArmA_Editorial_Carousel_35Plus",
       "status": "ADSET_PAUSED",
       "spend": 6.48,
-      "impr": 910,
+      "impr": 911,
       "clicks": 29,
       "atc": 0,
       "conv": 0,
@@ -453,8 +453,8 @@
       "name": "Ad_A1_Copy1_TableLiving_EditorialHeritage",
       "adset": "ArmA_Editorial_Carousel_35Plus",
       "status": "ADSET_PAUSED",
-      "spend": 10.68,
-      "impr": 1016,
+      "spend": 10.7,
+      "impr": 1018,
       "clicks": 25,
       "atc": 0,
       "conv": 0,
