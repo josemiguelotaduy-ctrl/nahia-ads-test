@@ -1,17 +1,17 @@
 {
-  "generated": "2026-11-07 16:27",
+  "generated": "2026-11-07 17:27",
   "summary": {
-    "total_spend": 186.57,
-    "google_spend": 111.94,
-    "meta_spend": 74.63,
-    "today_spend": 20.87,
+    "total_spend": 189.17,
+    "google_spend": 113.96,
+    "meta_spend": 75.21,
+    "today_spend": 23.47,
     "daily_rate": 32.5,
     "net_sales": 954.8,
     "orders": 14,
-    "test_clicks": 706,
-    "meta_test_clicks": 416,
+    "test_clicks": 716,
+    "meta_test_clicks": 420,
     "meta_test_atc": 41,
-    "google_test_clicks": 290
+    "google_test_clicks": 296
   },
   "daily": [
     {
@@ -58,8 +58,8 @@
     },
     {
       "d": "2026-11-07",
-      "google_spend": 9.66,
-      "meta_spend": 11.21,
+      "google_spend": 11.68,
+      "meta_spend": 11.79,
       "net_sales": 0.0,
       "orders": 0
     }
@@ -70,9 +70,9 @@
       "name": "Sales-Shopping-1",
       "status": "ENABLED",
       "daily_budget": 17.5,
-      "spend": 12.96,
-      "impr": 2447,
-      "clicks": 27,
+      "spend": 14.98,
+      "impr": 3012,
+      "clicks": 33,
       "conv": 0.0,
       "value": 0.0
     },
@@ -82,7 +82,7 @@
       "status": "PAUSED",
       "daily_budget": 4.5,
       "spend": 47.59,
-      "impr": 14463,
+      "impr": 14465,
       "clicks": 137,
       "conv": 1.0,
       "value": 14.0
@@ -93,7 +93,7 @@
       "status": "PAUSED",
       "daily_budget": 10.5,
       "spend": 43.1,
-      "impr": 9754,
+      "impr": 9752,
       "clicks": 113,
       "conv": 1.0,
       "value": 137.0
@@ -112,28 +112,6 @@
   ],
   "google_adgroups": [
     {
-      "id": "200398211406",
-      "name": "All_Products_ManualCPC_055",
-      "campaign": "G1_Nov2026_Shopping_ManualCPC_ArmA",
-      "status": "ENABLED",
-      "spend": 47.59,
-      "impr": 14463,
-      "clicks": 137,
-      "conv": 1.0,
-      "value": 14.0
-    },
-    {
-      "id": "208458193904",
-      "name": "All_Products_MaxConvValue",
-      "campaign": "G1_Nov2026_Shopping_MaxConvValue_ArmB",
-      "status": "ENABLED",
-      "spend": 43.1,
-      "impr": 9754,
-      "clicks": 113,
-      "conv": 1.0,
-      "value": 137.0
-    },
-    {
       "id": "200398203254",
       "name": "AG4_Livlig_Garden",
       "campaign": "G2_Nov2026_Search_LuxuryBrands_Exact",
@@ -143,6 +121,17 @@
       "clicks": 0,
       "conv": 0.0,
       "value": 0.0
+    },
+    {
+      "id": "200398211406",
+      "name": "All_Products_ManualCPC_055",
+      "campaign": "G1_Nov2026_Shopping_ManualCPC_ArmA",
+      "status": "ENABLED",
+      "spend": 47.59,
+      "impr": 14465,
+      "clicks": 137,
+      "conv": 1.0,
+      "value": 14.0
     },
     {
       "id": "201342417003",
@@ -198,6 +187,17 @@
       "clicks": 0,
       "conv": 0.0,
       "value": 0.0
+    },
+    {
+      "id": "208458193904",
+      "name": "All_Products_MaxConvValue",
+      "campaign": "G1_Nov2026_Shopping_MaxConvValue_ArmB",
+      "status": "ENABLED",
+      "spend": 43.1,
+      "impr": 9752,
+      "clicks": 113,
+      "conv": 1.0,
+      "value": 137.0
     }
   ],
   "google_ads": [
@@ -365,9 +365,9 @@
       "campaign": "M2_Nov2026_Retargeting_Warm_PanEU",
       "status": "ACTIVE",
       "daily_budget": 4.0,
-      "spend": 15.06,
-      "impr": 3204,
-      "clicks": 134,
+      "spend": 15.37,
+      "impr": 3259,
+      "clicks": 137,
       "atc": 12,
       "conv": 3,
       "value": 115.7
@@ -378,9 +378,9 @@
       "campaign": "M1_Nov2026_Prospecting_Tier1EU_Test",
       "status": "ACTIVE",
       "daily_budget": 11.0,
-      "spend": 31.45,
-      "impr": 3996,
-      "clicks": 202,
+      "spend": 31.72,
+      "impr": 4045,
+      "clicks": 203,
       "atc": 27,
       "conv": 6,
       "value": 409.2
@@ -392,7 +392,7 @@
       "status": "PAUSED",
       "daily_budget": 5.0,
       "spend": 28.12,
-      "impr": 3304,
+      "impr": 3305,
       "clicks": 80,
       "atc": 2,
       "conv": 0,
@@ -417,9 +417,9 @@
       "name": "Ad_R1_WarmDPA_Copy1_EffortlessElegance",
       "adset": "Warm_PanEU_30d_Retargeting",
       "status": "ACTIVE",
-      "spend": 15.06,
-      "impr": 3190,
-      "clicks": 134,
+      "spend": 15.37,
+      "impr": 3245,
+      "clicks": 137,
       "atc": 12,
       "conv": 3,
       "value": 115.7
@@ -429,9 +429,9 @@
       "name": "Ad_B2_FullCatalog_Copy2_StatementCraft",
       "adset": "ArmB_Catalog_FullSet_Dynamic_35Plus",
       "status": "ACTIVE",
-      "spend": 9.98,
-      "impr": 1141,
-      "clicks": 31,
+      "spend": 10.25,
+      "impr": 1190,
+      "clicks": 32,
       "atc": 0,
       "conv": 0,
       "value": 0.0
@@ -466,7 +466,7 @@
       "adset": "ArmA_Editorial_Carousel_35Plus",
       "status": "ADSET_PAUSED",
       "spend": 9.32,
-      "impr": 1124,
+      "impr": 1125,
       "clicks": 24,
       "atc": 2,
       "conv": 0,
