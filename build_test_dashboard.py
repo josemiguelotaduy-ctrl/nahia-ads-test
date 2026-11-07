@@ -235,10 +235,10 @@ def main():
                 daily[d_s]["google_spend"] = sp
 
         # Campaigns metadata + metrics
-        q_cm = "SELECT campaign.id, campaign.name, campaign.status, campaign_budget.amount_micros FROM campaign WHERE (campaign.name LIKE '%Nov2026%' OR campaign.name = 'Sales-Shopping-1') AND campaign.status != 'REMOVED'"
+        q_cm = "SELECT campaign.id, campaign.name, campaign.status, campaign_budget.amount_micros FROM campaign WHERE campaign.id IN (24326203832, 24417748931, 24417749450, 24417751670) AND campaign.status != 'REMOVED'"
         res_cm = http_json(f"https://googleads.googleapis.com/v26/customers/{cid}/googleAds:search",
                            data=json.dumps({"query": q_cm}).encode(), headers=g_headers).get("results", [])
-        q_cmet = f"SELECT campaign.id, metrics.cost_micros, metrics.clicks, metrics.impressions, metrics.conversions, metrics.conversions_value FROM campaign WHERE (campaign.name LIKE '%Nov2026%' OR campaign.name = 'Sales-Shopping-1') AND segments.date BETWEEN '{START_DATE}' AND '{today_str}'"
+        q_cmet = f"SELECT campaign.id, metrics.cost_micros, metrics.clicks, metrics.impressions, metrics.conversions, metrics.conversions_value FROM campaign WHERE campaign.id IN (24326203832, 24417748931, 24417749450, 24417751670) AND segments.date BETWEEN '{START_DATE}' AND '{today_str}'"
         res_cmet = http_json(f"https://googleads.googleapis.com/v26/customers/{cid}/googleAds:search",
                              data=json.dumps({"query": q_cmet}).encode(), headers=g_headers).get("results", [])
         c_map = defaultdict(lambda: {"spend": 0.0, "impr": 0, "clicks": 0, "conv": 0.0, "value": 0.0})
