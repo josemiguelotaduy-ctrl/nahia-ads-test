@@ -95,6 +95,7 @@ def build_live_context(d):
     mb = next((a for a in m_as if "ArmB" in a.get("name", "")), {"clicks": 0, "spend": 0, "conv": 0, "atc": 0})
     ret = next((a for a in m_as if "Retargeting" in a.get("name", "")), {"clicks": 0, "spend": 0, "conv": 0, "atc": 0})
 
+    g_orig = next((c for c in g_c if "Sales-Shopping-1" in c.get("name", "")), {"clicks": 0, "spend": 0, "daily_budget": 17.5})
     g1a = next((c for c in g_c if "ArmA" in c.get("name", "")), {"clicks": 0, "spend": 0})
     g1b = next((c for c in g_c if "ArmB" in c.get("name", "")), {"clicks": 0, "spend": 0})
     g2 = next((c for c in g_c if "Search" in c.get("name", "")), {"clicks": 0, "spend": 0})
@@ -112,18 +113,17 @@ RESUMEN GENERAL NOVIEMBRE:
 - Clics totales enviados a la web: {test_clicks} clics cualificados.
 
 MÉTRICAS ESPECÍFICAS DE HOY:
-- Gasto de hoy: {today_spend:.2f}€ (Google: {today_google:.2f}€, Meta: {today_meta:.2f}€). Tope diario seguro: 32,50€/día.
+- Gasto de hoy: {today_spend:.2f}€ (Google: {today_google:.2f}€, Meta: {today_meta:.2f}€). Tope diario seguro: 32,50€/día (17,50€ Google + 15,00€ Meta).
 - Ventas de hoy: {today_sales:.0f}€ ({today_orders} pedidos en la tienda).
 
-BATALLA A/B EN DIRECTO:
-• Meta Ads:
-  - Arm B (Catálogo Dinámico 238 SKU): {mb.get('spend', 0)}€ gastados, {mb.get('clicks', 0)} clics (CPC muy bajo 0,14€), {mb.get('atc', 0)} carritos, {mb.get('conv', 0)} compras. ¡VA GANANDO CON CLARIDAD!
-  - Arm A (Carrusel Editorial): {ma.get('spend', 0)}€ gastados, {ma.get('clicks', 0)} clics (CPC más caro), {ma.get('atc', 0)} carritos, 0 compras. Va lento.
-  - Retargeting Caliente (Warm 30d): {ret.get('spend', 0)}€ gastados, {ret.get('clicks', 0)} clics, {ret.get('conv', 0)} compras directas. Convirtiendo a ROAS muy alto.
-• Google Ads:
-  - Shopping Arm A (Manual CPC): {g1a.get('spend', 0)}€, {g1a.get('clicks', 0)} clics. Mucho volumen y clics a 0,33€.
-  - Shopping Arm B (Smart Bidding): {g1b.get('spend', 0)}€, {g1b.get('clicks', 0)} clics. Algoritmo aprendiendo.
-  - Search Marcas Lujo: {g2.get('spend', 0)}€, {g2.get('clicks', 0)} clics.
+CAMPAÑAS EN DIRECTO:
+• Meta Ads (15,00€/día total):
+  - Arm B (Catálogo Dinámico 238 SKU · ACTIVA a 11,00€/día): {mb.get('spend', 0)}€ gastados, {mb.get('clicks', 0)} clics (CPC 0,15€), {mb.get('atc', 0)} carritos, {mb.get('conv', 0)} compras (ROAS 13,5x). ¡GANADOR ABSOLUTO!
+  - Retargeting Caliente (Warm 30d · ACTIVA a 4,00€/día): {ret.get('spend', 0)}€ gastados, {ret.get('clicks', 0)} clics, {ret.get('conv', 0)} compras directas (ROAS 7,8x).
+  - Arm A (Carrusel Editorial · PAUSADA): {ma.get('spend', 0)}€ gastados, {ma.get('clicks', 0)} clics, 0 compras.
+• Google Ads (17,50€/día total):
+  - Sales-Shopping-1 (Campaña histórica · ACTIVA a 17,50€/día): {g_orig.get('spend', 0)}€ en Nov, {g_orig.get('clicks', 0)} clics (acumula 27 conversiones históricas y Smart Bidding maduro).
+  - Campañas de test G1 ArmA ({g1a.get('spend', 0)}€), G1 ArmB ({g1b.get('spend', 0)}€) y G2 Search ({g2.get('spend', 0)}€): PAUSADAS.
 """
 
 def call_gemini(user_prompt, summary_ctx, key):
