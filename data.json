@@ -1,17 +1,17 @@
 {
-  "generated": "2026-11-08 14:41",
+  "generated": "2026-11-08 15:30",
   "summary": {
-    "total_spend": 230.84,
-    "google_spend": 140.07,
-    "meta_spend": 90.77,
-    "today_spend": 20.08,
+    "total_spend": 234.6,
+    "google_spend": 142.95,
+    "meta_spend": 91.65,
+    "today_spend": 23.84,
     "daily_rate": 32.5,
     "net_sales": 1050.03,
     "orders": 16,
-    "test_clicks": 854,
-    "meta_test_clicks": 492,
+    "test_clicks": 861,
+    "meta_test_clicks": 494,
     "meta_test_atc": 45,
-    "google_test_clicks": 362
+    "google_test_clicks": 367
   },
   "daily": [
     {
@@ -65,8 +65,8 @@
     },
     {
       "d": "2026-11-08",
-      "google_spend": 8.29,
-      "meta_spend": 11.79,
+      "google_spend": 11.17,
+      "meta_spend": 12.67,
       "net_sales": 95.23,
       "orders": 2
     }
@@ -77,9 +77,9 @@
       "name": "Sales-Shopping-1",
       "status": "ENABLED",
       "daily_budget": 17.5,
-      "spend": 41.09,
-      "impr": 10533,
-      "clicks": 99,
+      "spend": 43.97,
+      "impr": 11093,
+      "clicks": 104,
       "conv": 2.0,
       "value": 82.68
     },
@@ -119,17 +119,6 @@
   ],
   "google_adgroups": [
     {
-      "id": "200398203254",
-      "name": "AG4_Livlig_Garden",
-      "campaign": "G2_Nov2026_Search_LuxuryBrands_Exact",
-      "status": "ENABLED",
-      "spend": 0.0,
-      "impr": 2,
-      "clicks": 0,
-      "conv": 0.0,
-      "value": 0.0
-    },
-    {
       "id": "200398211406",
       "name": "All_Products_ManualCPC_055",
       "campaign": "G1_Nov2026_Shopping_ManualCPC_ArmA",
@@ -139,6 +128,28 @@
       "clicks": 137,
       "conv": 1.0,
       "value": 14.0
+    },
+    {
+      "id": "208458193904",
+      "name": "All_Products_MaxConvValue",
+      "campaign": "G1_Nov2026_Shopping_MaxConvValue_ArmB",
+      "status": "ENABLED",
+      "spend": 43.1,
+      "impr": 9752,
+      "clicks": 113,
+      "conv": 1.0,
+      "value": 137.0
+    },
+    {
+      "id": "200398203254",
+      "name": "AG4_Livlig_Garden",
+      "campaign": "G2_Nov2026_Search_LuxuryBrands_Exact",
+      "status": "ENABLED",
+      "spend": 0.0,
+      "impr": 2,
+      "clicks": 0,
+      "conv": 0.0,
+      "value": 0.0
     },
     {
       "id": "201342417003",
@@ -194,17 +205,6 @@
       "clicks": 0,
       "conv": 0.0,
       "value": 0.0
-    },
-    {
-      "id": "208458193904",
-      "name": "All_Products_MaxConvValue",
-      "campaign": "G1_Nov2026_Shopping_MaxConvValue_ArmB",
-      "status": "ENABLED",
-      "spend": 43.1,
-      "impr": 9752,
-      "clicks": 113,
-      "conv": 1.0,
-      "value": 137.0
     }
   ],
   "google_ads": [
@@ -372,9 +372,9 @@
       "campaign": "M2_Nov2026_Retargeting_Warm_PanEU",
       "status": "ACTIVE",
       "daily_budget": 4.0,
-      "spend": 19.1,
-      "impr": 3965,
-      "clicks": 166,
+      "spend": 19.43,
+      "impr": 3982,
+      "clicks": 167,
       "atc": 16,
       "conv": 3,
       "value": 115.7
@@ -385,9 +385,9 @@
       "campaign": "M1_Nov2026_Prospecting_Tier1EU_Test",
       "status": "ACTIVE",
       "daily_budget": 11.0,
-      "spend": 43.36,
-      "impr": 5615,
-      "clicks": 246,
+      "spend": 43.91,
+      "impr": 5667,
+      "clicks": 247,
       "atc": 27,
       "conv": 6,
       "value": 409.2
@@ -425,7 +425,7 @@
       "adset": "Warm_PanEU_30d_Retargeting",
       "status": "ACTIVE",
       "spend": 18.64,
-      "impr": 3893,
+      "impr": 3897,
       "clicks": 162,
       "atc": 16,
       "conv": 3,
@@ -436,9 +436,9 @@
       "name": "Ad_B2_FullCatalog_Copy2_StatementCraft",
       "adset": "ArmB_Catalog_FullSet_Dynamic_35Plus",
       "status": "ACTIVE",
-      "spend": 21.84,
-      "impr": 2755,
-      "clicks": 75,
+      "spend": 22.39,
+      "impr": 2807,
+      "clicks": 76,
       "atc": 0,
       "conv": 0,
       "value": 0.0
@@ -484,9 +484,9 @@
       "name": "Ad_R2_WarmDPA_Copy2_IconicMaisons",
       "adset": "Warm_PanEU_30d_Retargeting",
       "status": "ACTIVE",
-      "spend": 0.46,
-      "impr": 72,
-      "clicks": 4,
+      "spend": 0.79,
+      "impr": 85,
+      "clicks": 5,
       "atc": 0,
       "conv": 0,
       "value": 0.0
