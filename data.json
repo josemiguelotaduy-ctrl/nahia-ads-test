@@ -1,17 +1,17 @@
 {
-  "generated": "2026-11-08 20:32",
+  "generated": "2026-11-08 21:26",
   "summary": {
-    "total_spend": 245.81,
-    "google_spend": 150.39,
-    "meta_spend": 95.42,
-    "today_spend": 35.05,
+    "total_spend": 248.52,
+    "google_spend": 152.61,
+    "meta_spend": 95.91,
+    "today_spend": 37.76,
     "daily_rate": 32.5,
-    "net_sales": 1050.03,
-    "orders": 16,
-    "test_clicks": 909,
-    "meta_test_clicks": 527,
+    "net_sales": 1161.33,
+    "orders": 17,
+    "test_clicks": 925,
+    "meta_test_clicks": 533,
     "meta_test_atc": 45,
-    "google_test_clicks": 382
+    "google_test_clicks": 392
   },
   "daily": [
     {
@@ -65,10 +65,10 @@
     },
     {
       "d": "2026-11-08",
-      "google_spend": 18.61,
-      "meta_spend": 16.44,
-      "net_sales": 95.23,
-      "orders": 2
+      "google_spend": 20.83,
+      "meta_spend": 16.93,
+      "net_sales": 206.53,
+      "orders": 3
     }
   ],
   "google_campaigns": [
@@ -77,9 +77,9 @@
       "name": "Sales-Shopping-1",
       "status": "ENABLED",
       "daily_budget": 17.5,
-      "spend": 51.41,
-      "impr": 12368,
-      "clicks": 119,
+      "spend": 53.63,
+      "impr": 12631,
+      "clicks": 129,
       "conv": 2.0,
       "value": 82.68
     },
@@ -119,17 +119,6 @@
   ],
   "google_adgroups": [
     {
-      "id": "200398203254",
-      "name": "AG4_Livlig_Garden",
-      "campaign": "G2_Nov2026_Search_LuxuryBrands_Exact",
-      "status": "ENABLED",
-      "spend": 0.0,
-      "impr": 2,
-      "clicks": 0,
-      "conv": 0.0,
-      "value": 0.0
-    },
-    {
       "id": "200398211406",
       "name": "All_Products_ManualCPC_055",
       "campaign": "G1_Nov2026_Shopping_ManualCPC_ArmA",
@@ -139,6 +128,28 @@
       "clicks": 137,
       "conv": 1.0,
       "value": 14.0
+    },
+    {
+      "id": "208458193904",
+      "name": "All_Products_MaxConvValue",
+      "campaign": "G1_Nov2026_Shopping_MaxConvValue_ArmB",
+      "status": "ENABLED",
+      "spend": 43.1,
+      "impr": 9752,
+      "clicks": 113,
+      "conv": 1.0,
+      "value": 137.0
+    },
+    {
+      "id": "200398203254",
+      "name": "AG4_Livlig_Garden",
+      "campaign": "G2_Nov2026_Search_LuxuryBrands_Exact",
+      "status": "ENABLED",
+      "spend": 0.0,
+      "impr": 2,
+      "clicks": 0,
+      "conv": 0.0,
+      "value": 0.0
     },
     {
       "id": "201342417003",
@@ -194,17 +205,6 @@
       "clicks": 0,
       "conv": 0.0,
       "value": 0.0
-    },
-    {
-      "id": "208458193904",
-      "name": "All_Products_MaxConvValue",
-      "campaign": "G1_Nov2026_Shopping_MaxConvValue_ArmB",
-      "status": "ENABLED",
-      "spend": 43.1,
-      "impr": 9752,
-      "clicks": 113,
-      "conv": 1.0,
-      "value": 137.0
     }
   ],
   "google_ads": [
@@ -372,9 +372,9 @@
       "campaign": "M2_Nov2026_Retargeting_Warm_PanEU",
       "status": "ACTIVE",
       "daily_budget": 4.0,
-      "spend": 20.2,
-      "impr": 4096,
-      "clicks": 173,
+      "spend": 20.43,
+      "impr": 4127,
+      "clicks": 174,
       "atc": 16,
       "conv": 3,
       "value": 115.7
@@ -385,9 +385,9 @@
       "campaign": "M1_Nov2026_Prospecting_Tier1EU_Test",
       "status": "ACTIVE",
       "daily_budget": 11.0,
-      "spend": 46.91,
-      "impr": 6182,
-      "clicks": 274,
+      "spend": 47.17,
+      "impr": 6240,
+      "clicks": 279,
       "atc": 27,
       "conv": 6,
       "value": 409.2
@@ -412,8 +412,8 @@
       "name": "Ad_B1_FullCatalog_Copy1_EditorialHeritage",
       "adset": "ArmB_Catalog_FullSet_Dynamic_35Plus",
       "status": "ACTIVE",
-      "spend": 21.58,
-      "impr": 2868,
+      "spend": 21.61,
+      "impr": 2872,
       "clicks": 171,
       "atc": 27,
       "conv": 6,
@@ -425,7 +425,7 @@
       "adset": "Warm_PanEU_30d_Retargeting",
       "status": "ACTIVE",
       "spend": 18.7,
-      "impr": 3907,
+      "impr": 3908,
       "clicks": 162,
       "atc": 16,
       "conv": 3,
@@ -436,9 +436,9 @@
       "name": "Ad_B2_FullCatalog_Copy2_StatementCraft",
       "adset": "ArmB_Catalog_FullSet_Dynamic_35Plus",
       "status": "ACTIVE",
-      "spend": 25.33,
-      "impr": 3314,
-      "clicks": 103,
+      "spend": 25.56,
+      "impr": 3368,
+      "clicks": 108,
       "atc": 0,
       "conv": 0,
       "value": 0.0
@@ -484,9 +484,9 @@
       "name": "Ad_R2_WarmDPA_Copy2_IconicMaisons",
       "adset": "Warm_PanEU_30d_Retargeting",
       "status": "ACTIVE",
-      "spend": 1.5,
-      "impr": 189,
-      "clicks": 11,
+      "spend": 1.73,
+      "impr": 219,
+      "clicks": 12,
       "atc": 0,
       "conv": 0,
       "value": 0.0
