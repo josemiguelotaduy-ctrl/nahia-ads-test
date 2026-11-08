@@ -1,15 +1,15 @@
 {
-  "generated": "2026-11-08 07:42",
+  "generated": "2026-11-08 08:51",
   "summary": {
-    "total_spend": 216.25,
+    "total_spend": 218.29,
     "google_spend": 134.93,
-    "meta_spend": 81.32,
-    "today_spend": 5.76,
+    "meta_spend": 83.36,
+    "today_spend": 7.8,
     "daily_rate": 32.5,
     "net_sales": 1000.87,
     "orders": 15,
-    "test_clicks": 795,
-    "meta_test_clicks": 452,
+    "test_clicks": 801,
+    "meta_test_clicks": 458,
     "meta_test_atc": 45,
     "google_test_clicks": 343
   },
@@ -66,7 +66,7 @@
     {
       "d": "2026-11-08",
       "google_spend": 3.42,
-      "meta_spend": 2.34,
+      "meta_spend": 4.38,
       "net_sales": 46.07,
       "orders": 1
     }
@@ -78,7 +78,7 @@
       "status": "ENABLED",
       "daily_budget": 17.5,
       "spend": 35.95,
-      "impr": 7661,
+      "impr": 7698,
       "clicks": 80,
       "conv": 1.0,
       "value": 39.8
@@ -372,9 +372,9 @@
       "campaign": "M2_Nov2026_Retargeting_Warm_PanEU",
       "status": "ACTIVE",
       "daily_budget": 4.0,
-      "spend": 16.93,
-      "impr": 3634,
-      "clicks": 150,
+      "spend": 17.54,
+      "impr": 3734,
+      "clicks": 153,
       "atc": 16,
       "conv": 3,
       "value": 115.7
@@ -385,9 +385,9 @@
       "campaign": "M1_Nov2026_Prospecting_Tier1EU_Test",
       "status": "ACTIVE",
       "daily_budget": 11.0,
-      "spend": 36.08,
-      "impr": 4803,
-      "clicks": 222,
+      "spend": 37.51,
+      "impr": 4977,
+      "clicks": 225,
       "atc": 27,
       "conv": 6,
       "value": 409.2
@@ -424,9 +424,9 @@
       "name": "Ad_R1_WarmDPA_Copy1_EffortlessElegance",
       "adset": "Warm_PanEU_30d_Retargeting",
       "status": "ACTIVE",
-      "spend": 16.93,
-      "impr": 3620,
-      "clicks": 150,
+      "spend": 17.54,
+      "impr": 3720,
+      "clicks": 153,
       "atc": 16,
       "conv": 3,
       "value": 115.7
@@ -436,9 +436,9 @@
       "name": "Ad_B2_FullCatalog_Copy2_StatementCraft",
       "adset": "ArmB_Catalog_FullSet_Dynamic_35Plus",
       "status": "ACTIVE",
-      "spend": 14.61,
-      "impr": 1946,
-      "clicks": 51,
+      "spend": 16.04,
+      "impr": 2120,
+      "clicks": 54,
       "atc": 0,
       "conv": 0,
       "value": 0.0
