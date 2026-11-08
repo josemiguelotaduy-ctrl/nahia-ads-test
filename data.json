@@ -1,17 +1,17 @@
 {
-  "generated": "2026-11-08 10:37",
+  "generated": "2026-11-08 11:32",
   "summary": {
-    "total_spend": 222.44,
-    "google_spend": 136.05,
-    "meta_spend": 86.39,
-    "today_spend": 11.68,
+    "total_spend": 224.99,
+    "google_spend": 136.37,
+    "meta_spend": 88.62,
+    "today_spend": 14.23,
     "daily_rate": 32.5,
     "net_sales": 1050.03,
     "orders": 16,
-    "test_clicks": 821,
-    "meta_test_clicks": 473,
+    "test_clicks": 825,
+    "meta_test_clicks": 476,
     "meta_test_atc": 45,
-    "google_test_clicks": 348
+    "google_test_clicks": 349
   },
   "daily": [
     {
@@ -65,8 +65,8 @@
     },
     {
       "d": "2026-11-08",
-      "google_spend": 4.27,
-      "meta_spend": 7.41,
+      "google_spend": 4.59,
+      "meta_spend": 9.64,
       "net_sales": 95.23,
       "orders": 2
     }
@@ -77,9 +77,9 @@
       "name": "Sales-Shopping-1",
       "status": "ENABLED",
       "daily_budget": 17.5,
-      "spend": 37.07,
-      "impr": 7925,
-      "clicks": 85,
+      "spend": 37.39,
+      "impr": 8306,
+      "clicks": 86,
       "conv": 1.0,
       "value": 39.8
     },
@@ -372,9 +372,9 @@
       "campaign": "M2_Nov2026_Retargeting_Warm_PanEU",
       "status": "ACTIVE",
       "daily_budget": 4.0,
-      "spend": 18.35,
-      "impr": 3868,
-      "clicks": 159,
+      "spend": 18.61,
+      "impr": 3900,
+      "clicks": 161,
       "atc": 16,
       "conv": 3,
       "value": 115.7
@@ -385,9 +385,9 @@
       "campaign": "M1_Nov2026_Prospecting_Tier1EU_Test",
       "status": "ACTIVE",
       "daily_budget": 11.0,
-      "spend": 39.73,
-      "impr": 5236,
-      "clicks": 234,
+      "spend": 41.7,
+      "impr": 5411,
+      "clicks": 235,
       "atc": 27,
       "conv": 6,
       "value": 409.2
@@ -424,9 +424,9 @@
       "name": "Ad_R1_WarmDPA_Copy1_EffortlessElegance",
       "adset": "Warm_PanEU_30d_Retargeting",
       "status": "ACTIVE",
-      "spend": 18.35,
-      "impr": 3854,
-      "clicks": 159,
+      "spend": 18.61,
+      "impr": 3886,
+      "clicks": 161,
       "atc": 16,
       "conv": 3,
       "value": 115.7
@@ -436,9 +436,9 @@
       "name": "Ad_B2_FullCatalog_Copy2_StatementCraft",
       "adset": "ArmB_Catalog_FullSet_Dynamic_35Plus",
       "status": "ACTIVE",
-      "spend": 18.26,
-      "impr": 2379,
-      "clicks": 63,
+      "spend": 20.23,
+      "impr": 2554,
+      "clicks": 64,
       "atc": 0,
       "conv": 0,
       "value": 0.0
