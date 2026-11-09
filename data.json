@@ -1,17 +1,17 @@
 {
-  "generated": "2026-11-09 06:54",
+  "generated": "2026-11-09 08:06",
   "summary": {
-    "total_spend": 233.15,
-    "google_spend": 134.93,
-    "meta_spend": 98.22,
-    "today_spend": 0.67,
+    "total_spend": 253.57,
+    "google_spend": 154.85,
+    "meta_spend": 98.72,
+    "today_spend": 2.17,
     "daily_rate": 32.5,
     "net_sales": 1161.33,
     "orders": 17,
-    "test_clicks": 885,
+    "test_clicks": 946,
     "meta_test_clicks": 542,
     "meta_test_atc": 49,
-    "google_test_clicks": 343
+    "google_test_clicks": 404
   },
   "daily": [
     {
@@ -58,22 +58,22 @@
     },
     {
       "d": "2026-11-07",
-      "google_spend": 29.230000000000004,
+      "google_spend": 29.500000000000004,
       "meta_spend": 15.56,
       "net_sales": 0.0,
       "orders": 0
     },
     {
       "d": "2026-11-08",
-      "google_spend": 3.42,
+      "google_spend": 22.07,
       "meta_spend": 18.57,
       "net_sales": 206.53,
       "orders": 3
     },
     {
       "d": "2026-11-09",
-      "google_spend": 0.0,
-      "meta_spend": 0.67,
+      "google_spend": 1.0,
+      "meta_spend": 1.17,
       "net_sales": 0.0,
       "orders": 0
     }
@@ -84,11 +84,11 @@
       "name": "Sales-Shopping-1",
       "status": "ENABLED",
       "daily_budget": 0.0,
-      "spend": 35.95,
-      "impr": 7667,
-      "clicks": 80,
-      "conv": 1.0,
-      "value": 39.8
+      "spend": 55.87,
+      "impr": 13553,
+      "clicks": 141,
+      "conv": 3.0,
+      "value": 173.74
     },
     {
       "id": "sheet_G1_Nov2026_Shopping_ManualCPC_ArmA",
@@ -133,8 +133,8 @@
       "campaign": "M2_Nov2026_Retargeting_Warm_PanEU",
       "status": "ACTIVE",
       "daily_budget": 4.0,
-      "spend": 21.0,
-      "impr": 4226,
+      "spend": 21.23,
+      "impr": 4243,
       "clicks": 180,
       "atc": 20,
       "conv": 3,
@@ -146,8 +146,8 @@
       "campaign": "M1_Nov2026_Prospecting_Tier1EU_Test",
       "status": "ACTIVE",
       "daily_budget": 11.0,
-      "spend": 48.91,
-      "impr": 6471,
+      "spend": 49.18,
+      "impr": 6523,
       "clicks": 282,
       "atc": 27,
       "conv": 6,
@@ -174,7 +174,7 @@
       "adset": "ArmB_Catalog_FullSet_Dynamic_35Plus",
       "status": "ACTIVE",
       "spend": 21.61,
-      "impr": 2875,
+      "impr": 2876,
       "clicks": 171,
       "atc": 27,
       "conv": 6,
@@ -197,8 +197,8 @@
       "name": "Ad_B2_FullCatalog_Copy2_StatementCraft",
       "adset": "ArmB_Catalog_FullSet_Dynamic_35Plus",
       "status": "ACTIVE",
-      "spend": 27.3,
-      "impr": 3596,
+      "spend": 27.57,
+      "impr": 3647,
       "clicks": 111,
       "atc": 0,
       "conv": 0,
@@ -245,8 +245,8 @@
       "name": "Ad_R2_WarmDPA_Copy2_IconicMaisons",
       "adset": "Warm_PanEU_30d_Retargeting",
       "status": "ACTIVE",
-      "spend": 2.3,
-      "impr": 318,
+      "spend": 2.53,
+      "impr": 335,
       "clicks": 18,
       "atc": 4,
       "conv": 0,
