@@ -1,15 +1,15 @@
 {
-  "generated": "2026-11-09 12:46",
+  "generated": "2026-11-09 13:53",
   "summary": {
-    "total_spend": 256.83,
+    "total_spend": 257.89,
     "google_spend": 154.85,
-    "meta_spend": 101.98,
-    "today_spend": 5.43,
+    "meta_spend": 103.04,
+    "today_spend": 6.49,
     "daily_rate": 32.5,
     "net_sales": 1197.83,
     "orders": 18,
-    "test_clicks": 963,
-    "meta_test_clicks": 559,
+    "test_clicks": 969,
+    "meta_test_clicks": 565,
     "meta_test_atc": 51,
     "google_test_clicks": 404
   },
@@ -73,7 +73,7 @@
     {
       "d": "2026-11-09",
       "google_spend": 1.0,
-      "meta_spend": 4.43,
+      "meta_spend": 5.49,
       "net_sales": 36.5,
       "orders": 1
     }
@@ -133,9 +133,9 @@
       "campaign": "M2_Nov2026_Retargeting_Warm_PanEU",
       "status": "ACTIVE",
       "daily_budget": 4.0,
-      "spend": 22.55,
-      "impr": 4377,
-      "clicks": 188,
+      "spend": 22.87,
+      "impr": 4419,
+      "clicks": 190,
       "atc": 22,
       "conv": 3,
       "value": 115.7
@@ -146,9 +146,9 @@
       "campaign": "M1_Nov2026_Prospecting_Tier1EU_Test",
       "status": "ACTIVE",
       "daily_budget": 11.0,
-      "spend": 51.12,
-      "impr": 6893,
-      "clicks": 291,
+      "spend": 51.86,
+      "impr": 6987,
+      "clicks": 295,
       "atc": 27,
       "conv": 6,
       "value": 409.2
@@ -197,9 +197,9 @@
       "name": "Ad_B2_FullCatalog_Copy2_StatementCraft",
       "adset": "ArmB_Catalog_FullSet_Dynamic_35Plus",
       "status": "ACTIVE",
-      "spend": 29.51,
-      "impr": 4017,
-      "clicks": 120,
+      "spend": 30.25,
+      "impr": 4111,
+      "clicks": 124,
       "atc": 0,
       "conv": 0,
       "value": 0.0
@@ -213,6 +213,18 @@
       "impr": 917,
       "clicks": 29,
       "atc": 0,
+      "conv": 0,
+      "value": 0.0
+    },
+    {
+      "id": "120252170350380646",
+      "name": "Ad_R2_WarmDPA_Copy2_IconicMaisons",
+      "adset": "Warm_PanEU_30d_Retargeting",
+      "status": "ACTIVE",
+      "spend": 4.12,
+      "impr": 502,
+      "clicks": 26,
+      "atc": 6,
       "conv": 0,
       "value": 0.0
     },
@@ -237,18 +249,6 @@
       "impr": 1125,
       "clicks": 24,
       "atc": 2,
-      "conv": 0,
-      "value": 0.0
-    },
-    {
-      "id": "120252170350380646",
-      "name": "Ad_R2_WarmDPA_Copy2_IconicMaisons",
-      "adset": "Warm_PanEU_30d_Retargeting",
-      "status": "ACTIVE",
-      "spend": 3.8,
-      "impr": 460,
-      "clicks": 24,
-      "atc": 6,
       "conv": 0,
       "value": 0.0
     },
