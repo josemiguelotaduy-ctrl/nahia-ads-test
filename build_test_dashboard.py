@@ -194,11 +194,12 @@ def main():
                         existing["conv"] += round(conv, 2)
                         existing["value"] += round(val, 2)
                     else:
+                        is_active_shop = (c_name == "Sales-Shopping-1")
                         google_campaigns.append({
                             "id": "sheet_" + c_name,
                             "name": c_name,
-                            "status": "ENABLED",
-                            "daily_budget": 0.0,
+                            "status": "ENABLED" if is_active_shop else "PAUSED",
+                            "daily_budget": 20.0 if is_active_shop else 0.0,
                             "spend": round(cost, 2),
                             "impr": impr,
                             "clicks": clicks,

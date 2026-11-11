@@ -107,7 +107,7 @@
     {
       "id": "sheet_G1_Nov2026_Shopping_ManualCPC_ArmA",
       "name": "G1_Nov2026_Shopping_ManualCPC_ArmA",
-      "status": "ENABLED",
+      "status": "PAUSED",
       "daily_budget": 0.0,
       "spend": 47.59,
       "impr": 14464,
@@ -118,7 +118,7 @@
     {
       "id": "sheet_G1_Nov2026_Shopping_MaxConvValue_ArmB",
       "name": "G1_Nov2026_Shopping_MaxConvValue_ArmB",
-      "status": "ENABLED",
+      "status": "PAUSED",
       "daily_budget": 0.0,
       "spend": 43.099999999999994,
       "impr": 9750,
@@ -129,7 +129,7 @@
     {
       "id": "sheet_G2_Nov2026_Search_LuxuryBrands_Exact",
       "name": "G2_Nov2026_Search_LuxuryBrands_Exact",
-      "status": "ENABLED",
+      "status": "PAUSED",
       "daily_budget": 0.0,
       "spend": 8.29,
       "impr": 208,
