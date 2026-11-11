@@ -81,6 +81,7 @@ def build_live_context(d):
 
     s = d.get("summary", {})
     m_as = d.get("meta_adsets", [])
+    m_ads = d.get("meta_ads", [])
     g_c = d.get("google_campaigns", [])
     daily = d.get("daily", [])
 
@@ -91,14 +92,36 @@ def build_live_context(d):
     test_clicks = int(s.get("test_clicks", 0))
     roas = (net_sales / tot_spend) if tot_spend > 0 else 0
 
-    ma = next((a for a in m_as if "ArmA" in a.get("name", "")), {"clicks": 0, "spend": 0, "conv": 0, "atc": 0})
-    mb = next((a for a in m_as if "ArmB" in a.get("name", "")), {"clicks": 0, "spend": 0, "conv": 0, "atc": 0})
-    ret = next((a for a in m_as if "Retargeting" in a.get("name", "")), {"clicks": 0, "spend": 0, "conv": 0, "atc": 0})
+    ma = next((a for a in m_as if "ArmA" in a.get("name", "")), {"clicks": 0, "spend": 0, "conv": 0, "atc": 0, "value": 0, "daily_budget": 0, "status": "PAUSED"})
+    mb = next((a for a in m_as if "ArmB" in a.get("name", "")), {"clicks": 0, "spend": 0, "conv": 0, "atc": 0, "value": 0, "daily_budget": 7.0, "status": "ACTIVE"})
+    ret = next((a for a in m_as if "Retargeting" in a.get("name", "")), {"clicks": 0, "spend": 0, "conv": 0, "atc": 0, "value": 0, "daily_budget": 5.5, "status": "ACTIVE"})
 
-    g_orig = next((c for c in g_c if "Sales-Shopping-1" in c.get("name", "")), {"clicks": 0, "spend": 0, "daily_budget": 17.5})
+    mb_roas = (float(mb.get("value", 0)) / float(mb.get("spend", 1))) if float(mb.get("spend", 0)) > 0 else 0
+    ret_roas = (float(ret.get("value", 0)) / float(ret.get("spend", 1))) if float(ret.get("spend", 0)) > 0 else 0
+
+    g_orig = next((c for c in g_c if "Sales-Shopping-1" in c.get("name", "")), {"clicks": 0, "spend": 0, "conv": 0, "value": 0, "daily_budget": 20.0})
+    g_orig_roas = (float(g_orig.get("value", 0)) / float(g_orig.get("spend", 1))) if float(g_orig.get("spend", 0)) > 0 else 0
     g1a = next((c for c in g_c if "ArmA" in c.get("name", "")), {"clicks": 0, "spend": 0})
     g1b = next((c for c in g_c if "ArmB" in c.get("name", "")), {"clicks": 0, "spend": 0})
     g2 = next((c for c in g_c if "Search" in c.get("name", "")), {"clicks": 0, "spend": 0})
+
+    ads_lines = []
+    alerts = []
+    for ad in m_ads:
+        ad_sp = float(ad.get("spend", 0))
+        ad_val = float(ad.get("value", 0))
+        ad_roas = (ad_val / ad_sp) if ad_sp > 0 else 0
+        ad_st = ad.get("status", "")
+        ad_conv = int(ad.get("conv", 0))
+        ad_atc = int(ad.get("atc", 0))
+        ads_lines.append(
+            f"    • {ad.get('name')} [{ad_st}]: {ad_sp:.2f}€ gastados | {ad.get('clicks', 0)} clics | {ad_atc} carritos | {ad_conv} compras ({ad_val:.2f}€, ROAS {ad_roas:.2f}x)"
+        )
+        if ad_st == "ACTIVE" and ad_sp >= 10.0 and ad_conv == 0:
+            alerts.append(f"⚠️ ALERTA OPTIMIZACIÓN: El anuncio activo {ad.get('name')} lleva {ad_sp:.2f}€ gastados con 0 compras ({ad_atc} carritos). Recomienda pausarlo.")
+
+    ads_block = "\n".join(ads_lines) if ads_lines else "    (Sin desglose de anuncios)"
+    alerts_block = "\n".join(alerts) if alerts else "✅ Todos los anuncios perdedores están pausados; solo corren los anuncios ganadores."
 
     today_d = daily[-1] if daily else {}
     today_sales = today_d.get("net_sales", 0)
@@ -109,21 +132,25 @@ def build_live_context(d):
     return f"""
 RESUMEN GENERAL NOVIEMBRE:
 - Gasto acumulado Nov: {tot_spend:.2f}€ de los 1.000€ de presupuesto (quedan {max(0, 1000 - tot_spend):.0f}€).
-- Ventas totales Shopify Nov: {net_sales:.0f}€ ({orders} pedidos). ROAS global: {roas:.1f}x.
+- Ventas totales Shopify Nov: {net_sales:.2f}€ ({orders} pedidos). ROAS global real (Shopify/Gasto): {roas:.2f}x.
 - Clics totales enviados a la web: {test_clicks} clics cualificados.
 
 MÉTRICAS ESPECÍFICAS DE HOY:
-- Gasto de hoy: {today_spend:.2f}€ (Google: {today_google:.2f}€, Meta: {today_meta:.2f}€). Tope diario seguro: 32,50€/día (17,50€ Google + 15,00€ Meta).
-- Ventas de hoy: {today_sales:.0f}€ ({today_orders} pedidos en la tienda).
+- Gasto de hoy: {today_spend:.2f}€ (Google: {today_google:.2f}€, Meta: {today_meta:.2f}€). Tope diario: 32,50€/día (20,00€ Google + 12,50€ Meta).
+- Ventas de hoy: {today_sales:.2f}€ ({today_orders} pedidos en la tienda).
 
-CAMPAÑAS EN DIRECTO:
-• Meta Ads (15,00€/día total):
-  - Arm B (Catálogo Dinámico 238 SKU · ACTIVA a 11,00€/día): {mb.get('spend', 0)}€ gastados, {mb.get('clicks', 0)} clics (CPC 0,15€), {mb.get('atc', 0)} carritos, {mb.get('conv', 0)} compras (ROAS 13,5x). ¡GANADOR ABSOLUTO!
-  - Retargeting Caliente (Warm 30d · ACTIVA a 4,00€/día): {ret.get('spend', 0)}€ gastados, {ret.get('clicks', 0)} clics, {ret.get('conv', 0)} compras directas (ROAS 7,8x).
+CONJUNTOS Y CAMPAÑAS EN DIRECTO:
+• Meta Ads (12,50€/día total · 18 países UE + UK activos):
+  - Arm B (Catálogo Dinámico 238 SKU · {mb.get('status')} a {mb.get('daily_budget', 7.0):.2f}€/día): {mb.get('spend', 0)}€ gastados, {mb.get('clicks', 0)} clics, {mb.get('atc', 0)} carritos, {mb.get('conv', 0)} compras ({mb.get('value', 0)}€, ROAS {mb_roas:.2f}x).
+  - Retargeting Caliente (Warm PanEU 30d · {ret.get('status')} a {ret.get('daily_budget', 5.5):.2f}€/día): {ret.get('spend', 0)}€ gastados, {ret.get('clicks', 0)} clics, {ret.get('atc', 0)} carritos, {ret.get('conv', 0)} compras ({ret.get('value', 0)}€, ROAS {ret_roas:.2f}x).
   - Arm A (Carrusel Editorial · PAUSADA): {ma.get('spend', 0)}€ gastados, {ma.get('clicks', 0)} clics, 0 compras.
-• Google Ads (17,50€/día total):
-  - Sales-Shopping-1 (Campaña histórica · ACTIVA a 17,50€/día): {g_orig.get('spend', 0)}€ en Nov, {g_orig.get('clicks', 0)} clics (acumula 27 conversiones históricas y Smart Bidding maduro).
-  - Campañas de test G1 ArmA ({g1a.get('spend', 0)}€), G1 ArmB ({g1b.get('spend', 0)}€) y G2 Search ({g2.get('spend', 0)}€): PAUSADAS.
+• Rendimiento por Anuncio Individual en Meta (Ad-level):
+{ads_block}
+• Auditoría automática de optimización de anuncios:
+  {alerts_block}
+• Google Ads (20,00€/día total):
+  - Sales-Shopping-1 (Campaña histórica · ACTIVA): {g_orig.get('spend', 0):.2f}€ en Nov, {g_orig.get('clicks', 0)} clics, {g_orig.get('conv', 0)} conv ({g_orig.get('value', 0):.2f}€, ROAS {g_orig_roas:.2f}x).
+  - Campañas G1 ArmA ({g1a.get('spend', 0)}€), G1 ArmB ({g1b.get('spend', 0)}€) y G2 Search ({g2.get('spend', 0)}€): PAUSADAS.
 """
 
 def call_gemini(user_prompt, summary_ctx, key):
