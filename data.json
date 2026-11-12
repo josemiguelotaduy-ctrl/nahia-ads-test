@@ -1,10 +1,10 @@
 {
-  "generated": "2026-11-12 23:37",
+  "generated": "2026-11-13 00:33",
   "summary": {
     "total_spend": 363.79,
     "google_spend": 207.89,
     "meta_spend": 155.9,
-    "today_spend": 12.22,
+    "today_spend": 0.0,
     "daily_rate": 32.5,
     "net_sales": 1681.81,
     "orders": 24,
@@ -97,6 +97,13 @@
       "meta_spend": 10.93,
       "net_sales": 82.9,
       "orders": 1
+    },
+    {
+      "d": "2026-11-13",
+      "google_spend": 0.0,
+      "meta_spend": 0.0,
+      "net_sales": 0.0,
+      "orders": 0
     }
   ],
   "google_campaigns": [
@@ -168,7 +175,7 @@
       "status": "ACTIVE",
       "daily_budget": 7.0,
       "spend": 87.91,
-      "impr": 12794,
+      "impr": 12796,
       "clicks": 465,
       "atc": 29,
       "conv": 6,
@@ -195,7 +202,7 @@
       "adset": "ArmB_Catalog_FullSet_Dynamic_35Plus",
       "status": "ACTIVE",
       "spend": 42.61,
-      "impr": 6328,
+      "impr": 6330,
       "clicks": 268,
       "atc": 29,
       "conv": 6,
