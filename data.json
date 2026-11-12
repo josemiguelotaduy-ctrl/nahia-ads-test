@@ -1,15 +1,15 @@
 {
-  "generated": "2026-11-12 10:49",
+  "generated": "2026-11-12 11:51",
   "summary": {
-    "total_spend": 357.59,
+    "total_spend": 358.51,
     "google_spend": 207.89,
-    "meta_spend": 149.7,
-    "today_spend": 6.02,
+    "meta_spend": 150.62,
+    "today_spend": 6.94,
     "daily_rate": 32.5,
     "net_sales": 1598.91,
     "orders": 23,
-    "test_clicks": 1336,
-    "meta_test_clicks": 784,
+    "test_clicks": 1339,
+    "meta_test_clicks": 787,
     "meta_test_atc": 59,
     "google_test_clicks": 552
   },
@@ -94,7 +94,7 @@
     {
       "d": "2026-11-12",
       "google_spend": 1.29,
-      "meta_spend": 4.73,
+      "meta_spend": 5.65,
       "net_sales": 0.0,
       "orders": 0
     }
@@ -154,9 +154,9 @@
       "campaign": "M2_Nov2026_Retargeting_Warm_PanEU",
       "status": "ACTIVE",
       "daily_budget": 5.5,
-      "spend": 36.9,
-      "impr": 6639,
-      "clicks": 254,
+      "spend": 37.22,
+      "impr": 6695,
+      "clicks": 255,
       "atc": 28,
       "conv": 4,
       "value": 207.1
@@ -167,9 +167,9 @@
       "campaign": "M1_Nov2026_Prospecting_Tier1EU_Test",
       "status": "ACTIVE",
       "daily_budget": 7.0,
-      "spend": 84.49,
-      "impr": 12288,
-      "clicks": 450,
+      "spend": 85.09,
+      "impr": 12358,
+      "clicks": 452,
       "atc": 29,
       "conv": 6,
       "value": 409.2
@@ -194,9 +194,9 @@
       "name": "Ad_B1_FullCatalog_Copy1_EditorialHeritage",
       "adset": "ArmB_Catalog_FullSet_Dynamic_35Plus",
       "status": "ACTIVE",
-      "spend": 39.19,
-      "impr": 5822,
-      "clicks": 253,
+      "spend": 39.79,
+      "impr": 5892,
+      "clicks": 255,
       "atc": 29,
       "conv": 6,
       "value": 409.2
@@ -218,9 +218,9 @@
       "name": "Ad_R1_WarmDPA_Copy1_EffortlessElegance",
       "adset": "Warm_PanEU_30d_Retargeting",
       "status": "ACTIVE",
-      "spend": 24.37,
-      "impr": 4782,
-      "clicks": 190,
+      "spend": 24.69,
+      "impr": 4838,
+      "clicks": 191,
       "atc": 20,
       "conv": 4,
       "value": 207.1
