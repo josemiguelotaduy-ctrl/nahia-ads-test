@@ -1,17 +1,17 @@
 {
-  "generated": "2026-11-13 07:55",
+  "generated": "2026-11-13 09:12",
   "summary": {
-    "total_spend": 363.83,
-    "google_spend": 207.89,
+    "total_spend": 386.48,
+    "google_spend": 230.54,
     "meta_spend": 155.94,
-    "today_spend": 0.0,
+    "today_spend": 1.5,
     "daily_rate": 32.5,
     "net_sales": 1681.81,
     "orders": 24,
-    "test_clicks": 1364,
+    "test_clicks": 1415,
     "meta_test_clicks": 812,
     "meta_test_atc": 59,
-    "google_test_clicks": 552
+    "google_test_clicks": 603
   },
   "daily": [
     {
@@ -93,14 +93,14 @@
     },
     {
       "d": "2026-11-12",
-      "google_spend": 1.29,
+      "google_spend": 22.44,
       "meta_spend": 10.97,
       "net_sales": 82.9,
       "orders": 1
     },
     {
       "d": "2026-11-13",
-      "google_spend": 0.0,
+      "google_spend": 1.5,
       "meta_spend": 0.0,
       "net_sales": 0.0,
       "orders": 0
@@ -112,9 +112,9 @@
       "name": "Sales-Shopping-1",
       "status": "ENABLED",
       "daily_budget": 20.0,
-      "spend": 108.91,
-      "impr": 24442,
-      "clicks": 289,
+      "spend": 131.56,
+      "impr": 28448,
+      "clicks": 340,
       "conv": 6.0,
       "value": 256.24
     },
