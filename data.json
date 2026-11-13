@@ -1,9 +1,9 @@
 {
-  "generated": "2026-11-13 01:46",
+  "generated": "2026-11-13 02:57",
   "summary": {
-    "total_spend": 363.79,
+    "total_spend": 363.82,
     "google_spend": 207.89,
-    "meta_spend": 155.9,
+    "meta_spend": 155.93,
     "today_spend": 0.0,
     "daily_rate": 32.5,
     "net_sales": 1681.81,
@@ -94,7 +94,7 @@
     {
       "d": "2026-11-12",
       "google_spend": 1.29,
-      "meta_spend": 10.93,
+      "meta_spend": 10.96,
       "net_sales": 82.9,
       "orders": 1
     },
@@ -161,8 +161,8 @@
       "campaign": "M2_Nov2026_Retargeting_Warm_PanEU",
       "status": "ACTIVE",
       "daily_budget": 5.5,
-      "spend": 39.68,
-      "impr": 7146,
+      "spend": 39.71,
+      "impr": 7147,
       "clicks": 267,
       "atc": 28,
       "conv": 5,
@@ -213,8 +213,8 @@
       "name": "Ad_R1_WarmDPA_Copy1_EffortlessElegance",
       "adset": "Warm_PanEU_30d_Retargeting",
       "status": "ACTIVE",
-      "spend": 27.15,
-      "impr": 5289,
+      "spend": 27.18,
+      "impr": 5290,
       "clicks": 203,
       "atc": 20,
       "conv": 5,
