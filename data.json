@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-13 03:42",
+  "generated": "2026-11-13 04:43",
   "summary": {
     "total_spend": 363.82,
     "google_spend": 207.89,
@@ -175,7 +175,7 @@
       "status": "ACTIVE",
       "daily_budget": 7.0,
       "spend": 87.91,
-      "impr": 12796,
+      "impr": 12797,
       "clicks": 465,
       "atc": 29,
       "conv": 6,
@@ -202,7 +202,7 @@
       "adset": "ArmB_Catalog_FullSet_Dynamic_35Plus",
       "status": "ACTIVE",
       "spend": 42.61,
-      "impr": 6330,
+      "impr": 6331,
       "clicks": 268,
       "atc": 29,
       "conv": 6,
