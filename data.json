@@ -1,10 +1,10 @@
 {
-  "generated": "2026-11-13 23:36",
+  "generated": "2026-11-14 00:31",
   "summary": {
     "total_spend": 386.48,
     "google_spend": 230.54,
     "meta_spend": 155.94,
-    "today_spend": 1.5,
+    "today_spend": 0.0,
     "daily_rate": 32.5,
     "net_sales": 1681.81,
     "orders": 24,
@@ -101,6 +101,13 @@
     {
       "d": "2026-11-13",
       "google_spend": 1.5,
+      "meta_spend": 0.0,
+      "net_sales": 0.0,
+      "orders": 0
+    },
+    {
+      "d": "2026-11-14",
+      "google_spend": 0.0,
       "meta_spend": 0.0,
       "net_sales": 0.0,
       "orders": 0
