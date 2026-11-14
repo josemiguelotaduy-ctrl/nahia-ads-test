@@ -1,16 +1,16 @@
 {
-  "generated": "2026-11-14 11:31",
+  "generated": "2026-11-14 12:26",
   "summary": {
-    "total_spend": 404.62,
+    "total_spend": 406.6,
     "google_spend": 247.42,
-    "meta_spend": 157.2,
-    "today_spend": 3.66,
+    "meta_spend": 159.18,
+    "today_spend": 5.64,
     "daily_rate": 32.5,
-    "net_sales": 1763.18,
-    "orders": 25,
-    "test_clicks": 1474,
-    "meta_test_clicks": 816,
-    "meta_test_atc": 59,
+    "net_sales": 1794.28,
+    "orders": 26,
+    "test_clicks": 1485,
+    "meta_test_clicks": 827,
+    "meta_test_atc": 63,
     "google_test_clicks": 658
   },
   "daily": [
@@ -108,9 +108,9 @@
     {
       "d": "2026-11-14",
       "google_spend": 2.4,
-      "meta_spend": 1.26,
-      "net_sales": 81.37,
-      "orders": 1
+      "meta_spend": 3.24,
+      "net_sales": 112.47,
+      "orders": 2
     }
   ],
   "google_campaigns": [
@@ -181,10 +181,10 @@
       "campaign": "M1_Nov2026_Prospecting_Tier1EU_Test",
       "status": "ACTIVE",
       "daily_budget": 7.0,
-      "spend": 89.18,
-      "impr": 12957,
-      "clicks": 469,
-      "atc": 29,
+      "spend": 91.16,
+      "impr": 13121,
+      "clicks": 480,
+      "atc": 33,
       "conv": 6,
       "value": 409.2
     },
@@ -208,10 +208,10 @@
       "name": "Ad_B1_FullCatalog_Copy1_EditorialHeritage",
       "adset": "ArmB_Catalog_FullSet_Dynamic_35Plus",
       "status": "ACTIVE",
-      "spend": 43.88,
-      "impr": 6491,
-      "clicks": 272,
-      "atc": 29,
+      "spend": 45.86,
+      "impr": 6655,
+      "clicks": 283,
+      "atc": 33,
       "conv": 6,
       "value": 409.2
     },
