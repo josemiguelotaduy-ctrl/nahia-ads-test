@@ -1,16 +1,16 @@
 {
-  "generated": "2026-11-14 23:26",
+  "generated": "2026-11-15 00:26",
   "summary": {
-    "total_spend": 423.34,
+    "total_spend": 424.19,
     "google_spend": 247.42,
-    "meta_spend": 175.92,
-    "today_spend": 22.38,
+    "meta_spend": 176.77,
+    "today_spend": 0.14,
     "daily_rate": 32.5,
     "net_sales": 2003.53,
     "orders": 30,
-    "test_clicks": 1583,
-    "meta_test_clicks": 925,
-    "meta_test_atc": 70,
+    "test_clicks": 1587,
+    "meta_test_clicks": 929,
+    "meta_test_atc": 72,
     "google_test_clicks": 658
   },
   "daily": [
@@ -108,9 +108,16 @@
     {
       "d": "2026-11-14",
       "google_spend": 2.4,
-      "meta_spend": 19.98,
+      "meta_spend": 20.69,
       "net_sales": 321.72,
       "orders": 6
+    },
+    {
+      "d": "2026-11-15",
+      "google_spend": 0.0,
+      "meta_spend": 0.14,
+      "net_sales": 0.0,
+      "orders": 0
     }
   ],
   "google_campaigns": [
@@ -168,12 +175,12 @@
       "campaign": "M2_Nov2026_Retargeting_Warm_PanEU",
       "status": "ACTIVE",
       "daily_budget": 5.5,
-      "spend": 48.08,
-      "impr": 8209,
-      "clicks": 319,
-      "atc": 33,
-      "conv": 5,
-      "value": 290.0
+      "spend": 48.82,
+      "impr": 8270,
+      "clicks": 323,
+      "atc": 35,
+      "conv": 6,
+      "value": 313.9
     },
     {
       "id": "120252159335070646",
@@ -181,8 +188,8 @@
       "campaign": "M1_Nov2026_Prospecting_Tier1EU_Test",
       "status": "ACTIVE",
       "daily_budget": 7.0,
-      "spend": 99.53,
-      "impr": 14258,
+      "spend": 99.64,
+      "impr": 14292,
       "clicks": 526,
       "atc": 35,
       "conv": 6,
@@ -208,8 +215,8 @@
       "name": "Ad_B1_FullCatalog_Copy1_EditorialHeritage",
       "adset": "ArmB_Catalog_FullSet_Dynamic_35Plus",
       "status": "ACTIVE",
-      "spend": 54.23,
-      "impr": 7792,
+      "spend": 54.34,
+      "impr": 7826,
       "clicks": 329,
       "atc": 35,
       "conv": 6,
@@ -220,12 +227,12 @@
       "name": "Ad_R1_WarmDPA_Copy1_EffortlessElegance",
       "adset": "Warm_PanEU_30d_Retargeting",
       "status": "ACTIVE",
-      "spend": 35.51,
-      "impr": 6346,
-      "clicks": 255,
-      "atc": 25,
-      "conv": 5,
-      "value": 290.0
+      "spend": 36.29,
+      "impr": 6413,
+      "clicks": 259,
+      "atc": 27,
+      "conv": 6,
+      "value": 313.9
     },
     {
       "id": "120252170347880646",
