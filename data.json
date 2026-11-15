@@ -1,16 +1,16 @@
 {
-  "generated": "2026-11-15 01:40",
+  "generated": "2026-11-15 02:55",
   "summary": {
-    "total_spend": 424.53,
+    "total_spend": 424.81,
     "google_spend": 247.42,
-    "meta_spend": 177.11,
-    "today_spend": 0.46,
+    "meta_spend": 177.39,
+    "today_spend": 0.72,
     "daily_rate": 32.5,
     "net_sales": 2003.53,
     "orders": 30,
     "test_clicks": 1590,
     "meta_test_clicks": 932,
-    "meta_test_atc": 72,
+    "meta_test_atc": 74,
     "google_test_clicks": 658
   },
   "daily": [
@@ -108,14 +108,14 @@
     {
       "d": "2026-11-14",
       "google_spend": 2.4,
-      "meta_spend": 20.71,
+      "meta_spend": 20.73,
       "net_sales": 321.72,
       "orders": 6
     },
     {
       "d": "2026-11-15",
       "google_spend": 0.0,
-      "meta_spend": 0.46,
+      "meta_spend": 0.72,
       "net_sales": 0.0,
       "orders": 0
     }
@@ -175,10 +175,10 @@
       "campaign": "M2_Nov2026_Retargeting_Warm_PanEU",
       "status": "ACTIVE",
       "daily_budget": 5.5,
-      "spend": 48.92,
-      "impr": 8288,
+      "spend": 49.01,
+      "impr": 8308,
       "clicks": 324,
-      "atc": 35,
+      "atc": 37,
       "conv": 6,
       "value": 313.9
     },
@@ -188,8 +188,8 @@
       "campaign": "M1_Nov2026_Prospecting_Tier1EU_Test",
       "status": "ACTIVE",
       "daily_budget": 7.0,
-      "spend": 99.88,
-      "impr": 14319,
+      "spend": 100.07,
+      "impr": 14333,
       "clicks": 528,
       "atc": 35,
       "conv": 6,
@@ -215,8 +215,8 @@
       "name": "Ad_B1_FullCatalog_Copy1_EditorialHeritage",
       "adset": "ArmB_Catalog_FullSet_Dynamic_35Plus",
       "status": "ACTIVE",
-      "spend": 54.58,
-      "impr": 7853,
+      "spend": 54.77,
+      "impr": 7867,
       "clicks": 331,
       "atc": 35,
       "conv": 6,
@@ -227,10 +227,10 @@
       "name": "Ad_R1_WarmDPA_Copy1_EffortlessElegance",
       "adset": "Warm_PanEU_30d_Retargeting",
       "status": "ACTIVE",
-      "spend": 36.39,
-      "impr": 6431,
+      "spend": 36.48,
+      "impr": 6451,
       "clicks": 260,
-      "atc": 27,
+      "atc": 29,
       "conv": 6,
       "value": 313.9
     },
