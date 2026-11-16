@@ -1,15 +1,15 @@
 {
-  "generated": "2026-11-16 17:33",
+  "generated": "2026-11-16 18:52",
   "summary": {
-    "total_spend": 506.16,
+    "total_spend": 507.32,
     "google_spend": 303.02,
-    "meta_spend": 203.14,
-    "today_spend": 19.11,
+    "meta_spend": 204.3,
+    "today_spend": 20.27,
     "daily_rate": 32.5,
     "net_sales": 2600.29,
     "orders": 39,
-    "test_clicks": 1851,
-    "meta_test_clicks": 1068,
+    "test_clicks": 1857,
+    "meta_test_clicks": 1074,
     "meta_test_atc": 91,
     "google_test_clicks": 783
   },
@@ -122,7 +122,7 @@
     {
       "d": "2026-11-16",
       "google_spend": 8.66,
-      "meta_spend": 10.45,
+      "meta_spend": 11.61,
       "net_sales": 327.28,
       "orders": 4
     }
@@ -182,9 +182,9 @@
       "campaign": "M2_Nov2026_Retargeting_Warm_PanEU",
       "status": "ACTIVE",
       "daily_budget": 5.5,
-      "spend": 60.67,
-      "impr": 10086,
-      "clicks": 370,
+      "spend": 61.26,
+      "impr": 10192,
+      "clicks": 372,
       "atc": 42,
       "conv": 9,
       "value": 538.45
@@ -195,9 +195,9 @@
       "campaign": "M1_Nov2026_Prospecting_Tier1EU_Test",
       "status": "ACTIVE",
       "daily_budget": 7.0,
-      "spend": 114.16,
-      "impr": 16540,
-      "clicks": 618,
+      "spend": 114.72,
+      "impr": 16672,
+      "clicks": 622,
       "atc": 47,
       "conv": 7,
       "value": 451.1
@@ -222,9 +222,9 @@
       "name": "Ad_B1_FullCatalog_Copy1_EditorialHeritage",
       "adset": "ArmB_Catalog_FullSet_Dynamic_35Plus",
       "status": "ACTIVE",
-      "spend": 68.86,
-      "impr": 10074,
-      "clicks": 421,
+      "spend": 69.42,
+      "impr": 10206,
+      "clicks": 425,
       "atc": 47,
       "conv": 7,
       "value": 451.1
@@ -234,9 +234,9 @@
       "name": "Ad_R1_WarmDPA_Copy1_EffortlessElegance",
       "adset": "Warm_PanEU_30d_Retargeting",
       "status": "ACTIVE",
-      "spend": 48.14,
-      "impr": 8229,
-      "clicks": 306,
+      "spend": 48.73,
+      "impr": 8335,
+      "clicks": 308,
       "atc": 34,
       "conv": 9,
       "value": 538.45
