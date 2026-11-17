@@ -1,15 +1,15 @@
 {
-  "generated": "2026-11-17 11:53",
+  "generated": "2026-11-17 12:42",
   "summary": {
-    "total_spend": 519.45,
+    "total_spend": 520.23,
     "google_spend": 306.93,
-    "meta_spend": 212.52,
-    "today_spend": 5.23,
+    "meta_spend": 213.3,
+    "today_spend": 6.01,
     "daily_rate": 32.5,
     "net_sales": 2600.29,
     "orders": 39,
-    "test_clicks": 1957,
-    "meta_test_clicks": 1147,
+    "test_clicks": 1960,
+    "meta_test_clicks": 1150,
     "meta_test_atc": 95,
     "google_test_clicks": 810
   },
@@ -129,7 +129,7 @@
     {
       "d": "2026-11-17",
       "google_spend": 0.04,
-      "meta_spend": 5.19,
+      "meta_spend": 5.97,
       "net_sales": 0.0,
       "orders": 0
     }
@@ -189,9 +189,9 @@
       "campaign": "M2_Nov2026_Retargeting_Warm_PanEU",
       "status": "ACTIVE",
       "daily_budget": 5.5,
-      "spend": 64.4,
-      "impr": 10883,
-      "clicks": 403,
+      "spend": 64.79,
+      "impr": 10956,
+      "clicks": 404,
       "atc": 43,
       "conv": 9,
       "value": 538.45
@@ -202,9 +202,9 @@
       "campaign": "M1_Nov2026_Prospecting_Tier1EU_Test",
       "status": "ACTIVE",
       "daily_budget": 7.0,
-      "spend": 119.81,
-      "impr": 17721,
-      "clicks": 664,
+      "spend": 120.2,
+      "impr": 17793,
+      "clicks": 666,
       "atc": 50,
       "conv": 7,
       "value": 451.1
@@ -229,9 +229,9 @@
       "name": "Ad_B1_FullCatalog_Copy1_EditorialHeritage",
       "adset": "ArmB_Catalog_FullSet_Dynamic_35Plus",
       "status": "ACTIVE",
-      "spend": 74.51,
-      "impr": 11255,
-      "clicks": 467,
+      "spend": 74.9,
+      "impr": 11327,
+      "clicks": 469,
       "atc": 50,
       "conv": 7,
       "value": 451.1
@@ -241,9 +241,9 @@
       "name": "Ad_R1_WarmDPA_Copy1_EffortlessElegance",
       "adset": "Warm_PanEU_30d_Retargeting",
       "status": "ACTIVE",
-      "spend": 51.87,
-      "impr": 9026,
-      "clicks": 339,
+      "spend": 52.26,
+      "impr": 9099,
+      "clicks": 340,
       "atc": 35,
       "conv": 9,
       "value": 538.45
