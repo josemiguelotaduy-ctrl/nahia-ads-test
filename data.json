@@ -1,15 +1,15 @@
 {
-  "generated": "2026-11-23 12:44",
+  "generated": "2026-11-24 00:20",
   "summary": {
-    "total_spend": 721.05,
+    "total_spend": 728.36,
     "google_spend": 436.24,
-    "meta_spend": 284.81,
-    "today_spend": 6.28,
+    "meta_spend": 292.12,
+    "today_spend": 0.02,
     "daily_rate": 32.5,
     "net_sales": 3396.68,
     "orders": 51,
-    "test_clicks": 2619,
-    "meta_test_clicks": 1547,
+    "test_clicks": 2656,
+    "meta_test_clicks": 1584,
     "meta_test_atc": 133,
     "google_test_clicks": 1072
   },
@@ -171,7 +171,14 @@
     {
       "d": "2026-11-23",
       "google_spend": 1.61,
-      "meta_spend": 4.67,
+      "meta_spend": 11.96,
+      "net_sales": 0.0,
+      "orders": 0
+    },
+    {
+      "d": "2026-11-24",
+      "google_spend": 0.0,
+      "meta_spend": 0.02,
       "net_sales": 0.0,
       "orders": 0
     }
@@ -242,9 +249,9 @@
       "campaign": "M2_Nov2026_Retargeting_Warm_PanEU",
       "status": "ACTIVE",
       "daily_budget": 5.5,
-      "spend": 95.88,
-      "impr": 16150,
-      "clicks": 597,
+      "spend": 99.31,
+      "impr": 16578,
+      "clicks": 615,
       "atc": 59,
       "conv": 9,
       "value": 538.45
@@ -255,9 +262,9 @@
       "campaign": "M1_Nov2026_Prospecting_Tier1EU_Test",
       "status": "ACTIVE",
       "daily_budget": 7.0,
-      "spend": 160.62,
-      "impr": 24861,
-      "clicks": 870,
+      "spend": 164.5,
+      "impr": 25508,
+      "clicks": 889,
       "atc": 72,
       "conv": 9,
       "value": 507.0
@@ -282,9 +289,9 @@
       "name": "Ad_B1_FullCatalog_Copy1_EditorialHeritage",
       "adset": "ArmB_Catalog_FullSet_Dynamic_35Plus",
       "status": "ACTIVE",
-      "spend": 115.32,
-      "impr": 18395,
-      "clicks": 673,
+      "spend": 119.2,
+      "impr": 19042,
+      "clicks": 692,
       "atc": 72,
       "conv": 9,
       "value": 507.0
@@ -294,9 +301,9 @@
       "name": "Ad_R1_WarmDPA_Copy1_EffortlessElegance",
       "adset": "Warm_PanEU_30d_Retargeting",
       "status": "ACTIVE",
-      "spend": 83.35,
-      "impr": 14293,
-      "clicks": 533,
+      "spend": 86.78,
+      "impr": 14721,
+      "clicks": 551,
       "atc": 51,
       "conv": 9,
       "value": 538.45
