@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-28 02:01",
+  "generated": "2026-11-28 03:34",
   "summary": {
     "total_spend": 872.81,
     "google_spend": 543.54,
@@ -8,8 +8,8 @@
     "daily_rate": 32.5,
     "net_sales": 4234.29,
     "orders": 60,
-    "test_clicks": 3085,
-    "meta_test_clicks": 1825,
+    "test_clicks": 3087,
+    "meta_test_clicks": 1827,
     "meta_test_atc": 157,
     "google_test_clicks": 1260
   },
@@ -278,8 +278,8 @@
       "status": "ACTIVE",
       "daily_budget": 5.5,
       "spend": 121.92,
-      "impr": 19501,
-      "clicks": 730,
+      "impr": 19508,
+      "clicks": 731,
       "atc": 68,
       "conv": 10,
       "value": 694.45
@@ -290,9 +290,9 @@
       "campaign": "M1_Nov2026_Prospecting_Tier1EU_Test",
       "status": "ACTIVE",
       "daily_budget": 7.0,
-      "spend": 191.86,
-      "impr": 29451,
-      "clicks": 1015,
+      "spend": 192.11,
+      "impr": 29472,
+      "clicks": 1016,
       "atc": 87,
       "conv": 10,
       "value": 676.0
@@ -317,9 +317,9 @@
       "name": "Ad_B1_FullCatalog_Copy1_EditorialHeritage",
       "adset": "ArmB_Catalog_FullSet_Dynamic_35Plus",
       "status": "ACTIVE",
-      "spend": 146.56,
-      "impr": 22985,
-      "clicks": 818,
+      "spend": 146.81,
+      "impr": 23006,
+      "clicks": 819,
       "atc": 87,
       "conv": 10,
       "value": 676.0
@@ -330,8 +330,8 @@
       "adset": "Warm_PanEU_30d_Retargeting",
       "status": "ACTIVE",
       "spend": 109.39,
-      "impr": 17644,
-      "clicks": 666,
+      "impr": 17651,
+      "clicks": 667,
       "atc": 60,
       "conv": 10,
       "value": 694.45
